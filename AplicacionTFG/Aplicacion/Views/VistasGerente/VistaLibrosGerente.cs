@@ -1,5 +1,4 @@
-﻿
-using Datos.Controllers;
+﻿using Datos.Controllers;
 using Datos.Models;
 using System;
 using System.Collections.Generic;
@@ -37,12 +36,10 @@ namespace Presentacion.Views.VistasGerente
                 libros = listaFiltrada;
             }
 
-          
-
             foreach (Libro libro in libros)
             {
                 Genero genero = new GeneroController().ObtenerGenero(libro.idGenero);
-                tablaLibros.Rows.Add(libro.isbn,libro.titulo,genero.nombre,libro.autor,libro.precio,libro.stock,"Modificar");
+                tablaLibros.Rows.Add(libro.isbn, libro.titulo, genero.nombre, libro.autor, libro.precio, libro.stock, "Modificar");
             }
         }
 
@@ -56,9 +53,27 @@ namespace Presentacion.Views.VistasGerente
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            List<Libro>libros = new LibrosController().ObtenerLibrosPorTitulo(txtBuscar.Text);
+            List<Libro> libros = new LibrosController().ObtenerLibrosPorBusqueda(txtBuscar.Text);
             LimpiarTabla();
             CargarTabla(libros);
+        }
+
+        private void tablaLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 6 && e.RowIndex != -1)
+            {
+                DataGridViewRow fila = tablaLibros.Rows[e.RowIndex];
+                string isbn = fila.Cells[0].Value.ToString();
+                VistaLibroGerente vistaLibroGerente = new VistaLibroGerente(isbn);
+                vistaLibroGerente.ShowDialog();
+            }
+
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            LimpiarTabla();
+            CargarTabla(null);
         }
     }
 }

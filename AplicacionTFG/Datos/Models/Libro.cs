@@ -8,7 +8,7 @@ namespace Datos.Models
 {
     public class Libro
     {
-        public int isbn { get; set; }
+        public string isbn { get; set; }
         public int idGenero { get; set; }
         public string titulo { get; set; }
         public string autor { get; set; }

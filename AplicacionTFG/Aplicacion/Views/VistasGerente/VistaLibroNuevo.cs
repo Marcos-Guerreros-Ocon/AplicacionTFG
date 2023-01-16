@@ -2,12 +2,6 @@
 using Datos.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.Views.VistasGerente
@@ -38,24 +32,24 @@ namespace Presentacion.Views.VistasGerente
         {
             Genero genero = new GeneroController().ObtenerGenero(cbGenero.SelectedItem.ToString());
 
-            Libro libro= new Libro()
+            Libro libro = new Libro()
             {
-                isbn = Int32.Parse(txtISBN.Text),
+                isbn = txtISBN.Text,
                 idGenero = genero.idGenero,
                 titulo = txtTitulo.Text,
-                autor= txtAutor.Text,
+                autor = txtAutor.Text,
                 precio = (int)numPrecio.Value,
-                stock= (int)numStock.Value
+                stock = (int)numStock.Value
             };
 
-          bool exito = new LibrosController().InsertarLibro(libro);
+            bool exito = new LibrosController().InsertarLibro(libro);
             if (!exito)
             {
                 MessageBox.Show("Error al insertar el libro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            MessageBox.Show("Libro insertado con exito", "Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Libro insertado con exito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

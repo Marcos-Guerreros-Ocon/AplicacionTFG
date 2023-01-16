@@ -20,7 +20,7 @@ namespace Datos.Controllers
 
             return lista;
         }
-        public Libro ObtenerLibro(int isbn)
+        public Libro ObtenerLibro(string isbn)
         {
             WebResponse res = HttpConnection.Send(null, "GET", $"api/Libro/{isbn}");
             if (res==null)
@@ -49,7 +49,7 @@ namespace Datos.Controllers
                 return false;
             }
         }
-        public bool BorrarLibro(int isbn)
+        public bool BorrarLibro(string isbn)
         {
             try
             {
@@ -87,13 +87,13 @@ namespace Datos.Controllers
             }
         }
 
-        public List<Libro> ObtenerLibrosPorTitulo(string titulo)
+        public List<Libro> ObtenerLibrosPorBusqueda(string busqueda)
         {
             List<Libro>libros = ObtenerLibros();
             List<Libro> lista = new List<Libro>();
             foreach (Libro libro in libros)
             {
-                if (libro.titulo.Contains(titulo))
+                if (libro.isbn.Contains(busqueda)||libro.titulo.Contains(busqueda) || libro.autor.Contains(busqueda))
                 {
                     lista.Add(libro);
                 }

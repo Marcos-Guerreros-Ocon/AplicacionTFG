@@ -26,6 +26,7 @@ namespace Presentacion.Views.VistasGerente
         // BOTONES PARA LIBROS
         private void btnLibros_Click(object sender, EventArgs e)
         {
+            labelTitulo.Text = "Libros";
             openChildForm(new VistaLibrosGerente());
             if (!panelLibros.Visible)
             {
@@ -44,6 +45,7 @@ namespace Presentacion.Views.VistasGerente
             VistaLibrosGerente vistaLibrosGerente = new VistaLibrosGerente();
             vistaLibrosGerente.LimpiarTabla();
             vistaLibrosGerente.CargarTabla(libros);
+            labelTitulo.Text = "Libros";
             openChildForm(vistaLibrosGerente);
 
         }
@@ -57,6 +59,7 @@ namespace Presentacion.Views.VistasGerente
             VistaLibrosGerente vistaLibrosGerente = new VistaLibrosGerente();
             vistaLibrosGerente.LimpiarTabla();
             vistaLibrosGerente.CargarTabla(libros);
+            labelTitulo.Text = "Libros";
             openChildForm(vistaLibrosGerente);
         }
         private void btnLibros3_Click(object sender, EventArgs e)
@@ -69,6 +72,7 @@ namespace Presentacion.Views.VistasGerente
             VistaLibrosGerente vistaLibrosGerente = new VistaLibrosGerente();
             vistaLibrosGerente.LimpiarTabla();
             vistaLibrosGerente.CargarTabla(libros);
+            labelTitulo.Text = "Libros";
             openChildForm(vistaLibrosGerente);
         }
         private void btnLibros4_Click(object sender, EventArgs e)
@@ -81,6 +85,7 @@ namespace Presentacion.Views.VistasGerente
             VistaLibrosGerente vistaLibrosGerente = new VistaLibrosGerente();
             vistaLibrosGerente.LimpiarTabla();
             vistaLibrosGerente.CargarTabla(libros);
+            labelTitulo.Text = "Libros";
             openChildForm(vistaLibrosGerente);
 
         }
@@ -229,6 +234,5 @@ namespace Presentacion.Views.VistasGerente
             }
         }
 
-      
     }
 }

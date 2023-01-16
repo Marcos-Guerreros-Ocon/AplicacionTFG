@@ -56,6 +56,8 @@
             this.fotoLogo = new System.Windows.Forms.PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelFormulario = new System.Windows.Forms.Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.labelTitulo = new Presentacion.Controllers.LabelPropio();
             this.panelMenu.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.panelVendedores.SuspendLayout();
@@ -63,6 +65,7 @@
             this.panelLibros.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoLogo)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -175,7 +178,7 @@
             this.btnSolicitudesRechazadas.Name = "btnSolicitudesRechazadas";
             this.btnSolicitudesRechazadas.Size = new System.Drawing.Size(233, 50);
             this.btnSolicitudesRechazadas.TabIndex = 1;
-            this.btnSolicitudesRechazadas.Text = "Rechazadas";
+            this.btnSolicitudesRechazadas.Text = "Configuación";
             this.btnSolicitudesRechazadas.UseVisualStyleBackColor = false;
             // 
             // btnSolicitudesAprobadas
@@ -189,7 +192,7 @@
             this.btnSolicitudesAprobadas.Name = "btnSolicitudesAprobadas";
             this.btnSolicitudesAprobadas.Size = new System.Drawing.Size(233, 50);
             this.btnSolicitudesAprobadas.TabIndex = 0;
-            this.btnSolicitudesAprobadas.Text = "Aprobadas";
+            this.btnSolicitudesAprobadas.Text = "Estadisticas";
             this.btnSolicitudesAprobadas.UseVisualStyleBackColor = false;
             // 
             // btnVendedores
@@ -232,7 +235,7 @@
             this.btnVentas4.Name = "btnVentas4";
             this.btnVentas4.Size = new System.Drawing.Size(233, 50);
             this.btnVentas4.TabIndex = 3;
-            this.btnVentas4.Text = "Teclado";
+            this.btnVentas4.Text = "Genero";
             this.btnVentas4.UseVisualStyleBackColor = false;
             // 
             // btnVentas3
@@ -246,7 +249,7 @@
             this.btnVentas3.Name = "btnVentas3";
             this.btnVentas3.Size = new System.Drawing.Size(233, 50);
             this.btnVentas3.TabIndex = 2;
-            this.btnVentas3.Text = "Switch";
+            this.btnVentas3.Text = "Genero";
             this.btnVentas3.UseVisualStyleBackColor = false;
             // 
             // btnVentas2
@@ -260,7 +263,7 @@
             this.btnVentas2.Name = "btnVentas2";
             this.btnVentas2.Size = new System.Drawing.Size(233, 50);
             this.btnVentas2.TabIndex = 1;
-            this.btnVentas2.Text = "ChromeCast";
+            this.btnVentas2.Text = "Genero";
             this.btnVentas2.UseVisualStyleBackColor = false;
             // 
             // btnVentas1
@@ -274,7 +277,7 @@
             this.btnVentas1.Name = "btnVentas1";
             this.btnVentas1.Size = new System.Drawing.Size(233, 50);
             this.btnVentas1.TabIndex = 0;
-            this.btnVentas1.Text = "Ordenador";
+            this.btnVentas1.Text = "Genero";
             this.btnVentas1.UseVisualStyleBackColor = false;
             // 
             // btnVentas
@@ -317,7 +320,7 @@
             this.btnLibros4.Name = "btnLibros4";
             this.btnLibros4.Size = new System.Drawing.Size(233, 50);
             this.btnLibros4.TabIndex = 3;
-            this.btnLibros4.Text = "Teclado";
+            this.btnLibros4.Text = "Genero";
             this.btnLibros4.UseVisualStyleBackColor = false;
             this.btnLibros4.Click += new System.EventHandler(this.btnLibros4_Click);
             // 
@@ -332,7 +335,7 @@
             this.btnLibros3.Name = "btnLibros3";
             this.btnLibros3.Size = new System.Drawing.Size(233, 50);
             this.btnLibros3.TabIndex = 2;
-            this.btnLibros3.Text = "Switch";
+            this.btnLibros3.Text = "Genero";
             this.btnLibros3.UseVisualStyleBackColor = false;
             this.btnLibros3.Click += new System.EventHandler(this.btnLibros3_Click);
             // 
@@ -347,7 +350,7 @@
             this.btnLibros2.Name = "btnLibros2";
             this.btnLibros2.Size = new System.Drawing.Size(233, 50);
             this.btnLibros2.TabIndex = 1;
-            this.btnLibros2.Text = "ChromeCast";
+            this.btnLibros2.Text = "Genero";
             this.btnLibros2.UseVisualStyleBackColor = false;
             this.btnLibros2.Click += new System.EventHandler(this.btnLibros2_Click);
             // 
@@ -363,7 +366,7 @@
             this.btnLibros1.Name = "btnLibros1";
             this.btnLibros1.Size = new System.Drawing.Size(233, 50);
             this.btnLibros1.TabIndex = 0;
-            this.btnLibros1.Text = "Ordenador";
+            this.btnLibros1.Text = "Genero";
             this.btnLibros1.UseVisualStyleBackColor = false;
             this.btnLibros1.Click += new System.EventHandler(this.btnLibros1_Click);
             // 
@@ -413,11 +416,31 @@
             // 
             // panelFormulario
             // 
-            this.panelFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormulario.Location = new System.Drawing.Point(250, 0);
+            this.panelFormulario.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelFormulario.Location = new System.Drawing.Point(250, 124);
             this.panelFormulario.Name = "panelFormulario";
-            this.panelFormulario.Size = new System.Drawing.Size(950, 968);
+            this.panelFormulario.Size = new System.Drawing.Size(950, 844);
             this.panelFormulario.TabIndex = 1;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2Panel1.Controls.Add(this.labelTitulo);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.FillColor = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2Panel1.Location = new System.Drawing.Point(250, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(950, 122);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.Location = new System.Drawing.Point(72, 41);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(195, 42);
+            this.labelTitulo.TabIndex = 0;
+            this.labelTitulo.Text = "Titulo";
             // 
             // ProgramaGerente
             // 
@@ -425,6 +448,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 968);
             this.ControlBox = false;
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panelFormulario);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -442,6 +466,7 @@
             this.panelLibros.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fotoLogo)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -474,5 +499,7 @@
         private System.Windows.Forms.Button btnGeneros;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Panel panelFormulario;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Controllers.LabelPropio labelTitulo;
     }
 }
