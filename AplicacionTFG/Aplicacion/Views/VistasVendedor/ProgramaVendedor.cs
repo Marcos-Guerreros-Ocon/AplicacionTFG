@@ -1,5 +1,6 @@
 ﻿using Datos.Controllers;
 using Datos.Models;
+using Presentacion.Views.VistasGerente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,13 +11,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentacion.Views.VistasGerente
+namespace Presentacion.Views.VistasVendedor
 {
-    public partial class ProgramaGerente : Form
+    public partial class ProgramaVendedor : Form
     {
-
         private Form formularioActivo;
-        public ProgramaGerente()
+        public ProgramaVendedor()
         {
             InitializeComponent();
             customizeDesing();
@@ -26,8 +26,7 @@ namespace Presentacion.Views.VistasGerente
         // BOTONES PARA LIBROS
         private void btnLibros_Click(object sender, EventArgs e)
         {
-            labelTitulo.Text = "Libros";
-            openChildForm(new VistaLibrosGerente());
+            openChildForm(new VistaLibrosVendedor());
             if (!panelLibros.Visible)
             {
                 MostrarSubCategorias();
@@ -42,11 +41,10 @@ namespace Presentacion.Views.VistasGerente
                 btnLibros1.Text
             };
             List<Libro> libros = new LibrosController().ObtenerLibrosPorGenero(genero);
-            VistaLibrosGerente vistaLibrosGerente = new VistaLibrosGerente();
-            vistaLibrosGerente.LimpiarTabla();
-            vistaLibrosGerente.CargarTabla(libros);
-            labelTitulo.Text = "Libros";
-            openChildForm(vistaLibrosGerente);
+            VistaLibrosVendedor vistaLibrosVendedor = new VistaLibrosVendedor();
+            vistaLibrosVendedor.LimpiarTabla();
+            vistaLibrosVendedor.CargarTabla(libros);
+            openChildForm(vistaLibrosVendedor);
 
         }
         private void btnLibros2_Click(object sender, EventArgs e)
@@ -56,11 +54,10 @@ namespace Presentacion.Views.VistasGerente
                 btnLibros2.Text
             };
             List<Libro> libros = new LibrosController().ObtenerLibrosPorGenero(genero);
-            VistaLibrosGerente vistaLibrosGerente = new VistaLibrosGerente();
-            vistaLibrosGerente.LimpiarTabla();
-            vistaLibrosGerente.CargarTabla(libros);
-            labelTitulo.Text = "Libros";
-            openChildForm(vistaLibrosGerente);
+            VistaLibrosVendedor vistaLibrosVendedor = new VistaLibrosVendedor();
+            vistaLibrosVendedor.LimpiarTabla();
+            vistaLibrosVendedor.CargarTabla(libros);
+            openChildForm(vistaLibrosVendedor);
         }
         private void btnLibros3_Click(object sender, EventArgs e)
         {
@@ -69,11 +66,10 @@ namespace Presentacion.Views.VistasGerente
                 btnLibros3.Text
             };
             List<Libro> libros = new LibrosController().ObtenerLibrosPorGenero(genero);
-            VistaLibrosGerente vistaLibrosGerente = new VistaLibrosGerente();
-            vistaLibrosGerente.LimpiarTabla();
-            vistaLibrosGerente.CargarTabla(libros);
-            labelTitulo.Text = "Libros";
-            openChildForm(vistaLibrosGerente);
+            VistaLibrosVendedor vistaLibrosVendedor = new VistaLibrosVendedor();
+            vistaLibrosVendedor.LimpiarTabla();
+            vistaLibrosVendedor.CargarTabla(libros);
+            openChildForm(vistaLibrosVendedor);
         }
         private void btnLibros4_Click(object sender, EventArgs e)
         {
@@ -82,31 +78,17 @@ namespace Presentacion.Views.VistasGerente
                 btnLibros4.Text
             };
             List<Libro> libros = new LibrosController().ObtenerLibrosPorGenero(genero);
-            VistaLibrosGerente vistaLibrosGerente = new VistaLibrosGerente();
-            vistaLibrosGerente.LimpiarTabla();
-            vistaLibrosGerente.CargarTabla(libros);
-            labelTitulo.Text = "Libros";
-            openChildForm(vistaLibrosGerente);
+            VistaLibrosVendedor vistaLibrosVendedor = new VistaLibrosVendedor();
+            vistaLibrosVendedor.LimpiarTabla();
+            vistaLibrosVendedor.CargarTabla(libros);
+            openChildForm(vistaLibrosVendedor);
 
         }
 
         // BOTONES PARA VENTAS Y VENDEDORES
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            if (!panelVentas.Visible)
-            {
-                MostrarSubCategorias();
-                showSubMenu(panelVentas);
-            }
-        }
 
-        private void btnVendedores_Click(object sender, EventArgs e)
-        {
-            if (!panelVendedores.Visible)
-            {
-                MostrarSubCategorias();
-                showSubMenu(panelVendedores);
-            }
         }
 
         // FUNCIONES VARIAS PARA HACER DINAMICO EL MENU
@@ -114,8 +96,6 @@ namespace Presentacion.Views.VistasGerente
         {
             panelLibros.Visible = false;
             panelVentas.Visible = false;
-            panelVendedores.Visible = false;
-            panelConfiguracion.Visible = false;
 
         }
         private void hideSubMenu()
@@ -128,16 +108,6 @@ namespace Presentacion.Views.VistasGerente
             {
                 panelVentas.Visible = false;
             }
-            if (panelVendedores.Visible == true)
-            {
-                panelVendedores.Visible = false;
-            }
-            if (panelConfiguracion.Visible == true)
-            {
-                panelConfiguracion.Visible = false;
-            }
-
-
         }
 
         private void openChildForm(Form formulario)

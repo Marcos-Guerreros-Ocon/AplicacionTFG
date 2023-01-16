@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Datos.Controllers;
+using Datos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace Presentacion.Views.VistasGerente
         public VistaVentasGerente()
         {
             InitializeComponent();
+
         }
     }
 }

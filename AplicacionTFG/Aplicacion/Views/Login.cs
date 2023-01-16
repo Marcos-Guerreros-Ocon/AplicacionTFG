@@ -2,6 +2,7 @@
 using Datos.Controllers;
 using Datos.Models;
 using Presentacion.Views.VistasGerente;
+using Presentacion.Views.VistasVendedor;
 using System;
 using System.Security.Cryptography;
 using System.Text;
@@ -59,17 +60,23 @@ namespace Presentacion.Views
                 return;
             }
 
-            if (usuario.tipo.Equals("Gerente"))
+            if (usuario.tipo.Equals("gerente"))
             {
                 ProgramaGerente programa= new ProgramaGerente();
-                programa.Show();
-                this.Hide();   
+                this.Hide();
+                programa.ShowDialog();
+                this.Show();                
                 return;
             }
 
-            if (usuario.tipo.Equals("Vendedor"))
+            if (usuario.tipo.Equals("vendedor"))
             {
-                this.correo = correo;          
+                ProgramaVendedor vendedor = new ProgramaVendedor();
+                this.correo = correo;
+                this.Hide();
+                vendedor.ShowDialog();
+                this.Show();               
+                        
                 return;
             }
           

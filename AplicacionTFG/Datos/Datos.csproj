@@ -107,10 +107,12 @@
     <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\LibrosController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\VentaController.cs" />
     <Compile Include="HttpConnection.cs" />
     <Compile Include="Models\Genero.cs" />
     <Compile Include="Models\Libro.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

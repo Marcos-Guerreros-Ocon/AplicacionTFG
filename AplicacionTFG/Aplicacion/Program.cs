@@ -1,5 +1,6 @@
 ﻿using Presentacion.Views;
 using Presentacion.Views.VistasGerente;
+using Presentacion.Views.VistasVendedor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProgramaGerente());
+            Application.Run(new VistaVentasGerente());
         }
     }
 }

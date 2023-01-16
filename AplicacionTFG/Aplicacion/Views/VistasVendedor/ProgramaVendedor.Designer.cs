@@ -1,6 +1,8 @@
-﻿namespace Presentacion.Views.VistasGerente
+﻿using Presentacion.Views.VistasGerente;
+
+namespace Presentacion.Views.VistasVendedor
 {
-    partial class ProgramaGerente
+    partial class ProgramaVendedor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +31,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgramaGerente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgramaVendedor));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelConfiguracion = new System.Windows.Forms.Panel();
-            this.btnConfiguracionCategorias = new System.Windows.Forms.Button();
-            this.btnConfiguracionUsuarios = new System.Windows.Forms.Button();
-            this.btnGeneros = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.panelVendedores = new System.Windows.Forms.Panel();
-            this.btnSolicitudesRechazadas = new System.Windows.Forms.Button();
-            this.btnSolicitudesAprobadas = new System.Windows.Forms.Button();
-            this.btnVendedores = new System.Windows.Forms.Button();
             this.panelVentas = new System.Windows.Forms.Panel();
             this.btnVentas4 = new System.Windows.Forms.Button();
             this.btnVentas3 = new System.Windows.Forms.Button();
@@ -56,27 +50,18 @@
             this.fotoLogo = new System.Windows.Forms.PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelFormulario = new System.Windows.Forms.Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.labelTitulo = new Presentacion.Controllers.LabelPropio();
             this.panelMenu.SuspendLayout();
-            this.panelConfiguracion.SuspendLayout();
-            this.panelVendedores.SuspendLayout();
             this.panelVentas.SuspendLayout();
             this.panelLibros.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoLogo)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.Coral;
-            this.panelMenu.Controls.Add(this.panelConfiguracion);
-            this.panelMenu.Controls.Add(this.btnGeneros);
             this.panelMenu.Controls.Add(this.btnSalir);
-            this.panelMenu.Controls.Add(this.panelVendedores);
-            this.panelMenu.Controls.Add(this.btnVendedores);
             this.panelMenu.Controls.Add(this.panelVentas);
             this.panelMenu.Controls.Add(this.btnVentas);
             this.panelMenu.Controls.Add(this.panelLibros);
@@ -89,59 +74,6 @@
             this.panelMenu.Size = new System.Drawing.Size(250, 968);
             this.panelMenu.TabIndex = 0;
             // 
-            // panelConfiguracion
-            // 
-            this.panelConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(206)))), ((int)(((byte)(217)))));
-            this.panelConfiguracion.Controls.Add(this.btnConfiguracionCategorias);
-            this.panelConfiguracion.Controls.Add(this.btnConfiguracionUsuarios);
-            this.panelConfiguracion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConfiguracion.Location = new System.Drawing.Point(0, 828);
-            this.panelConfiguracion.Name = "panelConfiguracion";
-            this.panelConfiguracion.Size = new System.Drawing.Size(233, 100);
-            this.panelConfiguracion.TabIndex = 7;
-            // 
-            // btnConfiguracionCategorias
-            // 
-            this.btnConfiguracionCategorias.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnConfiguracionCategorias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConfiguracionCategorias.FlatAppearance.BorderSize = 0;
-            this.btnConfiguracionCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracionCategorias.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConfiguracionCategorias.Location = new System.Drawing.Point(0, 50);
-            this.btnConfiguracionCategorias.Name = "btnConfiguracionCategorias";
-            this.btnConfiguracionCategorias.Size = new System.Drawing.Size(233, 50);
-            this.btnConfiguracionCategorias.TabIndex = 1;
-            this.btnConfiguracionCategorias.Text = "Categorias";
-            this.btnConfiguracionCategorias.UseVisualStyleBackColor = false;
-            // 
-            // btnConfiguracionUsuarios
-            // 
-            this.btnConfiguracionUsuarios.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnConfiguracionUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConfiguracionUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnConfiguracionUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracionUsuarios.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConfiguracionUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.btnConfiguracionUsuarios.Name = "btnConfiguracionUsuarios";
-            this.btnConfiguracionUsuarios.Size = new System.Drawing.Size(233, 50);
-            this.btnConfiguracionUsuarios.TabIndex = 0;
-            this.btnConfiguracionUsuarios.Text = "Usuarios";
-            this.btnConfiguracionUsuarios.UseVisualStyleBackColor = false;
-            // 
-            // btnGeneros
-            // 
-            this.btnGeneros.BackColor = System.Drawing.Color.Coral;
-            this.btnGeneros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGeneros.FlatAppearance.BorderSize = 0;
-            this.btnGeneros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGeneros.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGeneros.Location = new System.Drawing.Point(0, 778);
-            this.btnGeneros.Name = "btnGeneros";
-            this.btnGeneros.Size = new System.Drawing.Size(233, 50);
-            this.btnGeneros.TabIndex = 8;
-            this.btnGeneros.Text = "Géneros";
-            this.btnGeneros.UseVisualStyleBackColor = false;
-            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Brown;
@@ -149,67 +81,13 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSalir.Location = new System.Drawing.Point(0, 928);
+            this.btnSalir.Location = new System.Drawing.Point(0, 918);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(233, 50);
+            this.btnSalir.Size = new System.Drawing.Size(250, 50);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Cerrar Sesion";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // panelVendedores
-            // 
-            this.panelVendedores.BackColor = System.Drawing.Color.DarkSalmon;
-            this.panelVendedores.Controls.Add(this.btnSolicitudesRechazadas);
-            this.panelVendedores.Controls.Add(this.btnSolicitudesAprobadas);
-            this.panelVendedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVendedores.Location = new System.Drawing.Point(0, 678);
-            this.panelVendedores.Name = "panelVendedores";
-            this.panelVendedores.Size = new System.Drawing.Size(233, 100);
-            this.panelVendedores.TabIndex = 6;
-            // 
-            // btnSolicitudesRechazadas
-            // 
-            this.btnSolicitudesRechazadas.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnSolicitudesRechazadas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSolicitudesRechazadas.FlatAppearance.BorderSize = 0;
-            this.btnSolicitudesRechazadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolicitudesRechazadas.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSolicitudesRechazadas.Location = new System.Drawing.Point(0, 50);
-            this.btnSolicitudesRechazadas.Name = "btnSolicitudesRechazadas";
-            this.btnSolicitudesRechazadas.Size = new System.Drawing.Size(233, 50);
-            this.btnSolicitudesRechazadas.TabIndex = 1;
-            this.btnSolicitudesRechazadas.Text = "Configuación";
-            this.btnSolicitudesRechazadas.UseVisualStyleBackColor = false;
-            // 
-            // btnSolicitudesAprobadas
-            // 
-            this.btnSolicitudesAprobadas.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnSolicitudesAprobadas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSolicitudesAprobadas.FlatAppearance.BorderSize = 0;
-            this.btnSolicitudesAprobadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolicitudesAprobadas.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSolicitudesAprobadas.Location = new System.Drawing.Point(0, 0);
-            this.btnSolicitudesAprobadas.Name = "btnSolicitudesAprobadas";
-            this.btnSolicitudesAprobadas.Size = new System.Drawing.Size(233, 50);
-            this.btnSolicitudesAprobadas.TabIndex = 0;
-            this.btnSolicitudesAprobadas.Text = "Estadisticas";
-            this.btnSolicitudesAprobadas.UseVisualStyleBackColor = false;
-            // 
-            // btnVendedores
-            // 
-            this.btnVendedores.BackColor = System.Drawing.Color.Coral;
-            this.btnVendedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVendedores.FlatAppearance.BorderSize = 0;
-            this.btnVendedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVendedores.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVendedores.Location = new System.Drawing.Point(0, 628);
-            this.btnVendedores.Name = "btnVendedores";
-            this.btnVendedores.Size = new System.Drawing.Size(233, 50);
-            this.btnVendedores.TabIndex = 5;
-            this.btnVendedores.Text = "Vendedores";
-            this.btnVendedores.UseVisualStyleBackColor = false;
-            this.btnVendedores.Click += new System.EventHandler(this.btnVendedores_Click);
             // 
             // panelVentas
             // 
@@ -222,7 +100,7 @@
             this.panelVentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelVentas.Location = new System.Drawing.Point(0, 428);
             this.panelVentas.Name = "panelVentas";
-            this.panelVentas.Size = new System.Drawing.Size(233, 200);
+            this.panelVentas.Size = new System.Drawing.Size(250, 200);
             this.panelVentas.TabIndex = 1;
             // 
             // btnVentas4
@@ -234,7 +112,7 @@
             this.btnVentas4.ForeColor = System.Drawing.SystemColors.Control;
             this.btnVentas4.Location = new System.Drawing.Point(0, 150);
             this.btnVentas4.Name = "btnVentas4";
-            this.btnVentas4.Size = new System.Drawing.Size(233, 50);
+            this.btnVentas4.Size = new System.Drawing.Size(250, 50);
             this.btnVentas4.TabIndex = 3;
             this.btnVentas4.Text = "Genero";
             this.btnVentas4.UseVisualStyleBackColor = false;
@@ -248,7 +126,7 @@
             this.btnVentas3.ForeColor = System.Drawing.SystemColors.Control;
             this.btnVentas3.Location = new System.Drawing.Point(0, 100);
             this.btnVentas3.Name = "btnVentas3";
-            this.btnVentas3.Size = new System.Drawing.Size(233, 50);
+            this.btnVentas3.Size = new System.Drawing.Size(250, 50);
             this.btnVentas3.TabIndex = 2;
             this.btnVentas3.Text = "Genero";
             this.btnVentas3.UseVisualStyleBackColor = false;
@@ -262,7 +140,7 @@
             this.btnVentas2.ForeColor = System.Drawing.SystemColors.Control;
             this.btnVentas2.Location = new System.Drawing.Point(0, 50);
             this.btnVentas2.Name = "btnVentas2";
-            this.btnVentas2.Size = new System.Drawing.Size(233, 50);
+            this.btnVentas2.Size = new System.Drawing.Size(250, 50);
             this.btnVentas2.TabIndex = 1;
             this.btnVentas2.Text = "Genero";
             this.btnVentas2.UseVisualStyleBackColor = false;
@@ -276,7 +154,7 @@
             this.btnVentas1.ForeColor = System.Drawing.SystemColors.Control;
             this.btnVentas1.Location = new System.Drawing.Point(0, 0);
             this.btnVentas1.Name = "btnVentas1";
-            this.btnVentas1.Size = new System.Drawing.Size(233, 50);
+            this.btnVentas1.Size = new System.Drawing.Size(250, 50);
             this.btnVentas1.TabIndex = 0;
             this.btnVentas1.Text = "Genero";
             this.btnVentas1.UseVisualStyleBackColor = false;
@@ -290,7 +168,7 @@
             this.btnVentas.ForeColor = System.Drawing.Color.White;
             this.btnVentas.Location = new System.Drawing.Point(0, 378);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(233, 50);
+            this.btnVentas.Size = new System.Drawing.Size(250, 50);
             this.btnVentas.TabIndex = 4;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = false;
@@ -307,7 +185,7 @@
             this.panelLibros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLibros.Location = new System.Drawing.Point(0, 178);
             this.panelLibros.Name = "panelLibros";
-            this.panelLibros.Size = new System.Drawing.Size(233, 200);
+            this.panelLibros.Size = new System.Drawing.Size(250, 200);
             this.panelLibros.TabIndex = 3;
             // 
             // btnLibros4
@@ -319,7 +197,7 @@
             this.btnLibros4.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLibros4.Location = new System.Drawing.Point(0, 150);
             this.btnLibros4.Name = "btnLibros4";
-            this.btnLibros4.Size = new System.Drawing.Size(233, 50);
+            this.btnLibros4.Size = new System.Drawing.Size(250, 50);
             this.btnLibros4.TabIndex = 3;
             this.btnLibros4.Text = "Genero";
             this.btnLibros4.UseVisualStyleBackColor = false;
@@ -334,7 +212,7 @@
             this.btnLibros3.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLibros3.Location = new System.Drawing.Point(0, 100);
             this.btnLibros3.Name = "btnLibros3";
-            this.btnLibros3.Size = new System.Drawing.Size(233, 50);
+            this.btnLibros3.Size = new System.Drawing.Size(250, 50);
             this.btnLibros3.TabIndex = 2;
             this.btnLibros3.Text = "Genero";
             this.btnLibros3.UseVisualStyleBackColor = false;
@@ -349,7 +227,7 @@
             this.btnLibros2.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLibros2.Location = new System.Drawing.Point(0, 50);
             this.btnLibros2.Name = "btnLibros2";
-            this.btnLibros2.Size = new System.Drawing.Size(233, 50);
+            this.btnLibros2.Size = new System.Drawing.Size(250, 50);
             this.btnLibros2.TabIndex = 1;
             this.btnLibros2.Text = "Genero";
             this.btnLibros2.UseVisualStyleBackColor = false;
@@ -365,7 +243,7 @@
             this.btnLibros1.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLibros1.Location = new System.Drawing.Point(0, 0);
             this.btnLibros1.Name = "btnLibros1";
-            this.btnLibros1.Size = new System.Drawing.Size(233, 50);
+            this.btnLibros1.Size = new System.Drawing.Size(250, 50);
             this.btnLibros1.TabIndex = 0;
             this.btnLibros1.Text = "Genero";
             this.btnLibros1.UseVisualStyleBackColor = false;
@@ -380,7 +258,7 @@
             this.btnLibros.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLibros.Location = new System.Drawing.Point(0, 128);
             this.btnLibros.Name = "btnLibros";
-            this.btnLibros.Size = new System.Drawing.Size(233, 50);
+            this.btnLibros.Size = new System.Drawing.Size(250, 50);
             this.btnLibros.TabIndex = 2;
             this.btnLibros.Text = "Libros";
             this.btnLibros.UseVisualStyleBackColor = false;
@@ -393,7 +271,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(233, 128);
+            this.panelLogo.Size = new System.Drawing.Size(250, 128);
             this.panelLogo.TabIndex = 1;
             // 
             // fotoLogo
@@ -403,7 +281,7 @@
             this.fotoLogo.Image = ((System.Drawing.Image)(resources.GetObject("fotoLogo.Image")));
             this.fotoLogo.Location = new System.Drawing.Point(0, 0);
             this.fotoLogo.Name = "fotoLogo";
-            this.fotoLogo.Size = new System.Drawing.Size(233, 122);
+            this.fotoLogo.Size = new System.Drawing.Size(250, 122);
             this.fotoLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fotoLogo.TabIndex = 0;
             this.fotoLogo.TabStop = false;
@@ -423,63 +301,32 @@
             this.panelFormulario.Size = new System.Drawing.Size(950, 844);
             this.panelFormulario.TabIndex = 1;
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.guna2Panel1.Controls.Add(this.labelTitulo);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.FillColor = System.Drawing.SystemColors.InactiveBorder;
-            this.guna2Panel1.Location = new System.Drawing.Point(250, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(950, 122);
-            this.guna2Panel1.TabIndex = 2;
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(72, 41);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(93, 37);
-            this.labelTitulo.TabIndex = 0;
-            this.labelTitulo.Text = "Titulo";
-            // 
-            // ProgramaGerente
+            // ProgramaVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 968);
             this.ControlBox = false;
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panelFormulario);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1200, 968);
             this.MinimumSize = new System.Drawing.Size(1200, 968);
-            this.Name = "ProgramaGerente";
+            this.Name = "ProgramaVendedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Programa";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
-            this.panelConfiguracion.ResumeLayout(false);
-            this.panelVendedores.ResumeLayout(false);
             this.panelVentas.ResumeLayout(false);
             this.panelLibros.ResumeLayout(false);
             this.panelLibros.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fotoLogo)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelVendedores;
-        private System.Windows.Forms.Button btnSolicitudesRechazadas;
-        private System.Windows.Forms.Button btnSolicitudesAprobadas;
-        private System.Windows.Forms.Button btnVendedores;
         private System.Windows.Forms.Panel panelVentas;
         private System.Windows.Forms.Button btnVentas4;
         private System.Windows.Forms.Button btnVentas3;
@@ -496,13 +343,7 @@
         private System.Windows.Forms.PictureBox fotoLogo;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panelConfiguracion;
-        private System.Windows.Forms.Button btnConfiguracionCategorias;
-        private System.Windows.Forms.Button btnConfiguracionUsuarios;
-        private System.Windows.Forms.Button btnGeneros;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Panel panelFormulario;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Controllers.LabelPropio labelTitulo;
     }
 }
