@@ -20,6 +20,7 @@ namespace Presentacion.Views.VistasGerente
         {
             InitializeComponent();
             customizeDesing();
+            this.labelTitulo.Text = "";
             this.formularioActivo = null;
         }
 
@@ -115,7 +116,6 @@ namespace Presentacion.Views.VistasGerente
             panelLibros.Visible = false;
             panelVentas.Visible = false;
             panelVendedores.Visible = false;
-            panelConfiguracion.Visible = false;
 
         }
         private void hideSubMenu()
@@ -132,11 +132,6 @@ namespace Presentacion.Views.VistasGerente
             {
                 panelVendedores.Visible = false;
             }
-            if (panelConfiguracion.Visible == true)
-            {
-                panelConfiguracion.Visible = false;
-            }
-
 
         }
 
@@ -237,6 +232,13 @@ namespace Presentacion.Views.VistasGerente
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGeneros_Click(object sender, EventArgs e)
+        {
+            this.labelTitulo.Text = "Generos";
+            VistaGenerosGerente vistaGenerosGerente = new VistaGenerosGerente();
+            openChildForm(vistaGenerosGerente);
         }
     }
 }

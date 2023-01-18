@@ -8,9 +8,23 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
+    /// <summary>
+    /// Clase HTTPConection encargada de hacer las llamadas a la API y obtener las respuestas.
+    /// </summary>
     public static class HttpConnection
     {
+        /// <summary>
+        /// URL de la API.
+        /// </summary>
         static readonly string Url = $"https://localhost:7033/";
+
+        /// <summary>
+        /// Método encargado de enviar las llamadas a la API
+        /// </summary>
+        /// <param name="json">JSON con los datos, se utiliza en todos los casos excepto en las llamadas con el método GET.</param>
+        /// <param name="method">Método de la llamada de la API, pueden ser: GET, POST, PUT, DELETE</param>
+        /// <param name="endPoint">Endpoint que llamamos de la API</param>
+        /// <returns></returns>
         public static WebResponse Send(string json, string method, string endPoint)
         {
 
@@ -50,6 +64,11 @@ namespace Datos
 
         }
 
+        /// <summary>
+        /// Método encargado de traducir la respuesta de la API a un JSON.
+        /// </summary>
+        /// <param name="response">Respuesta de la API.</param>
+        /// <returns>Una cadena de texto convertida a un JSON.</returns>
         public static string ResponseToJson(WebResponse response)
         {
             using (response)

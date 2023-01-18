@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Presentacion.Controllers
 {
-    public partial class BotonPropio : Guna2Button
+    public partial class BotonPropio : BotonRedondeadoPropio
     {
         public BotonPropio()
         {
@@ -23,8 +23,6 @@ namespace Presentacion.Controllers
 
             InitializeComponent();
             BorderColor = System.Drawing.Color.DarkGray;
-            CustomBorderColor = System.Drawing.Color.DarkGray;
-            FillColor = System.Drawing.Color.Coral;
             ForeColor = System.Drawing.Color.Coral;
             Font = new System.Drawing.Font("Segoe UI", 9F);
             ForeColor = System.Drawing.Color.White;

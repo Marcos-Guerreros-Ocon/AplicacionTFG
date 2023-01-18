@@ -9,10 +9,16 @@ using System.Threading.Tasks;
 
 namespace Datos.Controllers
 {
+    /// <summary>
+    /// Clase encargada de realizar las operaciones CRUD de la clase Venta llamando a la API.
+    /// </summary>
     public class VentaController
     {
-
-        public List<Venta> ListarVentas()
+        /// <summary>
+        /// Método encargado de obtener las ventas existentes.
+        /// </summary>
+        /// <returns>Devuelve una lista de las ventas existentes.</returns>
+        public List<Venta> ObtenerVentas()
         {
             WebResponse res = HttpConnection.Send(null, "GET", "api/Venta");
             string json = HttpConnection.ResponseToJson(res);
@@ -21,6 +27,12 @@ namespace Datos.Controllers
             return lista;
 
         }
+
+        /// <summary>
+        /// Método encargado de obtener una venta por el id indicado.
+        /// </summary>
+        /// <param name="id">Id de la venta que queramos obtener.</param>
+        /// <returns>Devuevle una venta con el id indicado.</returns>
         public Venta ObtenerVenta(int id)
         {
             WebResponse res = HttpConnection.Send(null, "GET", "api/Venta/" + id);
@@ -29,13 +41,20 @@ namespace Datos.Controllers
 
             return venta;
         }
-        public List<Venta>ObtenerVentasDelVendedor(int idUsuario)
+
+        /// <summary>
+        /// Método encargado de obtener una lista de las ventas realizadas
+        /// por el id del usuario con el id indicado.
+        /// </summary>
+        /// <param name="idUsuario">Id del usuario que ha realizado las ventas.</param>
+        /// <returns>Devuelve una lista de las ventas realizadas por el id del usuario indicado.</returns>
+        public List<Venta> ObtenerVentasDelVendedor(int idUsuario)
         {
-            List<Venta> ventas = ListarVentas();
+            List<Venta> ventas = ObtenerVentas();
             List<Venta> lista = new List<Venta>();
             foreach (Venta venta in ventas)
             {
-                if (venta.idUsuario==idUsuario)
+                if (venta.idUsuario == idUsuario)
                 {
                     lista.Add(venta);
                 }
@@ -43,9 +62,15 @@ namespace Datos.Controllers
             }
             return lista;
         }
+
+        /// <summary>
+        /// Método encargo de obtener una lista de las ventas realizadas del libro con el isbn indicado.
+        /// </summary>
+        /// <param name="isbn">ISBN del libro que ha sido vendido.</param>
+        /// <returns>Devuelve una lista de las ventas del libro indicado.</returns>
         public List<Venta> ObtenerVentasDelLibro(string isbn)
         {
-            List<Venta> ventas = ListarVentas();
+            List<Venta> ventas = ObtenerVentas();
             List<Venta> lista = new List<Venta>();
             foreach (Venta venta in ventas)
             {
@@ -57,6 +82,12 @@ namespace Datos.Controllers
             }
             return lista;
         }
+
+        /// <summary>
+        /// Método encargado de insertar una venta.
+        /// </summary>
+        /// <param name="venta">Venta que queremos insertar.</param>
+        /// <returns>Devuelve true en caso de insertarlo y false en caso contrario.</returns>
         public bool InsertarVenta(Venta venta)
         {
             try
@@ -70,7 +101,5 @@ namespace Datos.Controllers
                 return false;
             }
         }
-
-       
     }
 }

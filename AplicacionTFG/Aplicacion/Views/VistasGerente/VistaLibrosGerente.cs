@@ -42,22 +42,24 @@ namespace Presentacion.Views.VistasGerente
                 tablaLibros.Rows.Add(libro.isbn, libro.titulo, genero.nombre, libro.autor, libro.precio, libro.stock, "Modificar");
             }
         }
+        private void RecargarTabla(List<Libro> lista)
+        {
+            LimpiarTabla();
+            CargarTabla(lista);
+
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             VistaLibroNuevo popup = new VistaLibroNuevo();
             popup.ShowDialog();
-            LimpiarTabla();
-            CargarTabla(null);
+            RecargarTabla(null);
         }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             List<Libro> libros = new LibrosController().ObtenerLibrosPorBusqueda(txtBuscar.Text);
-            LimpiarTabla();
-            CargarTabla(libros);
+            RecargarTabla(libros);
         }
-
         private void tablaLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 6 && e.RowIndex != -1)
@@ -66,14 +68,13 @@ namespace Presentacion.Views.VistasGerente
                 string isbn = fila.Cells[0].Value.ToString();
                 VistaLibroGerente vistaLibroGerente = new VistaLibroGerente(isbn);
                 vistaLibroGerente.ShowDialog();
+                RecargarTabla(null);
             }
 
-        }
-
+        }    
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
-            LimpiarTabla();
-            CargarTabla(null);
+            RecargarTabla(null);
         }
     }
 }

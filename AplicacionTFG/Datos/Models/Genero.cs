@@ -1,14 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Datos.Models
+﻿namespace Datos.Models
 {
+    /// <summary>
+    /// Clase Género
+    /// </summary>
     public class Genero
     {
+        /// <summary>
+        /// Campo idGenero con los getters y setters.
+        /// </summary>
         public int idGenero { get; set; }
+
+        /// <summary>
+        /// Campo nombre con los getters y setters.
+        /// </summary>
         public string nombre { get; set; }
     }
 }

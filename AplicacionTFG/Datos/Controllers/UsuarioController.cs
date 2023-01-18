@@ -10,9 +10,16 @@ using System.Threading.Tasks;
 
 namespace Datos.Controllers
 {
+    /// <summary>
+    /// Clase encargada de realizar las operaciones CRUD de la clase Usuario llamando a la API
+    /// </summary>
     public class UsuarioController
     {
-        public List<Usuario> ListarUsuarios()
+        /// <summary>
+        /// Método para obtener todos los usuarios que existen.
+        /// </summary>
+        /// <returns>Devuelve una lista de usuarios.</returns>
+        public List<Usuario> ObtenerUsuarios()
         {
             WebResponse res = HttpConnection.Send(null, "GET", "api/Usuario");
             string json = HttpConnection.ResponseToJson(res);
@@ -22,6 +29,11 @@ namespace Datos.Controllers
 
         }
 
+        /// <summary>
+        /// Método para obtener un usario con el id indicado.
+        /// </summary>
+        /// <param name="id">Id del usuario que queremos obtener.</param>
+        /// <returns>Devuelve un usuario con el id indicado.</returns>
         public Usuario ObtenerUsuario(int id)
         {
             WebResponse res = HttpConnection.Send(null, "GET", "api/Usuario/" + id);
@@ -31,9 +43,14 @@ namespace Datos.Controllers
             return usuario;
         }
 
+        /// <summary>
+        /// Método para obtener un usuario con el correo indicado.
+        /// </summary>
+        /// <param name="correo">Correo del usuario que queremos obtener.</param>
+        /// <returns>Devuelve un usuario con el correo indicado.</returns>
         public Usuario ObtenerUsuario(string correo)
         {
-            List<Usuario> usuarios = ListarUsuarios();
+            List<Usuario> usuarios = ObtenerUsuarios();
 
             foreach (Usuario usuario in usuarios)
             {
@@ -46,6 +63,11 @@ namespace Datos.Controllers
             return null;
         }
 
+        /// <summary>
+        /// Método para modificar un usuario.
+        /// </summary>
+        /// <param name="usuario">Usuario que queremos modificar.</param>
+        /// <returns>Devuelve true en caso de modificarlo y false en caso contrario.</returns>
         public bool ModificarUsuario(Usuario usuario)
         {
             try
@@ -68,6 +90,11 @@ namespace Datos.Controllers
             }
         }
 
+        /// <summary>
+        /// Método para insertar un usuario.
+        /// </summary>
+        /// <param name="usuario">Usuario que queremos insertar.</param>
+        /// <returns>Devuelve true en caso de insertarlo y false en caso contrario.</returns>
         public bool InsertarUsuario(Usuario usuario)
         {
             try
@@ -90,6 +117,11 @@ namespace Datos.Controllers
             }
         }
 
+        /// <summary>
+        /// Método para borrar un usuario.
+        /// </summary>
+        /// <param name="correo">Correo del usuario que queremos borrar.</param>
+        /// <returns>Devuelve true en caso de borrarlo y false en caso contrario.</returns>
         public bool BorrarUsuario(string correo)
         {
             try

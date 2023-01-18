@@ -9,9 +9,16 @@ using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Datos.Controllers
-{
+
+{   /// <summary>
+    /// Clase para realizar las operaciones CRUD de la clase Libro llamando a la API.
+    /// </summary>
     public class LibrosController
     {
+        /// <summary>
+        /// Método encargado de obtener un listado de los libros.
+        /// </summary>
+        /// <returns>Devuelve una lista de libros</returns>
         public List<Libro> ObtenerLibros()
         {
             WebResponse res = HttpConnection.Send(null, "GET", "api/Libro");
@@ -20,6 +27,12 @@ namespace Datos.Controllers
 
             return lista;
         }
+
+        /// <summary>
+        /// Método encargado de obtener un libro con el isbn indicado.
+        /// </summary>
+        /// <param name="isbn">ISBN del libro que queremos obtener.</param>
+        /// <returns>Devuelve el libro con el ISBN indicado</returns>
         public Libro ObtenerLibro(string isbn)
         {
             WebResponse res = HttpConnection.Send(null, "GET", $"api/Libro/{isbn}");
@@ -31,6 +44,12 @@ namespace Datos.Controllers
             Libro libro= JsonSerializer.Deserialize<Libro>(json);
             return libro;
         }        
+
+        /// <summary>
+        /// Método encargado de insertar un libro.
+        /// </summary>
+        /// <param name="libro">Libro que queremos insertar.</param>
+        /// <returns>Devuelve true en caso de insertar el libro y false en caso contrario.</returns>
         public bool InsertarLibro(Libro libro)
         {
             try
@@ -49,6 +68,12 @@ namespace Datos.Controllers
                 return false;
             }
         }
+        
+        /// <summary>
+        /// Método encargado de borrar un libro.
+        /// </summary>
+        /// <param name="isbn">ISBN del libro que queremos borrar.</param>
+        /// <returns>Devuelve true en caso de borrarlo y false en caso contrario.</returns>
         public bool BorrarLibro(string isbn)
         {
             try
@@ -68,6 +93,12 @@ namespace Datos.Controllers
                 return false;
             }
         }
+        
+        /// <summary>
+        /// Método encargado de modificar un libro.
+        /// </summary>
+        /// <param name="libro">Libro que queremos modificar.</param>
+        /// <returns>Devuelve true en caso de modificarlo y false en caso contrario.</returns>
         public bool ModificarLibro(Libro libro)
         {
             try
@@ -87,6 +118,11 @@ namespace Datos.Controllers
             }
         }
 
+        /// <summary>
+        /// Método encargado de obtener un listado de libros que contenga la busqueda indicada.
+        /// </summary>
+        /// <param name="busqueda">Busqueda por la que queramos que compruebes los campos del libro.</param>
+        /// <returns>Devuelve una lista de libros que contengan la busqueda indicada.</returns>
         public List<Libro> ObtenerLibrosPorBusqueda(string busqueda)
         {
             List<Libro>libros = ObtenerLibros();
@@ -101,6 +137,12 @@ namespace Datos.Controllers
 
             return lista;
         }
+        
+        /// <summary>
+        /// Método encargado de obntener un listado de libros que su género coincida con alguna de la lista de géneros indicada.
+        /// </summary>
+        /// <param name="generos">Lista de géneros por la que queremos filtrar.</param>
+        /// <returns>Devuelve una lista de libros que coinciden con algún género de la lista.</returns>
         public List<Libro> ObtenerLibrosPorGenero(List<string> generos)
         {
             List<Libro> listaLibros = new List<Libro>();
@@ -122,6 +164,12 @@ namespace Datos.Controllers
 
             return listaLibros;
         }
+
+        /// <summary>
+        /// Método encargado de obntener un listado de libros que su autor coincida con alguna de la lista de autores indicada.
+        /// </summary>
+        /// <param name="autores">Lista de autores por la que queremos filtrar.</param>
+        /// <returns>Devuelve una lista de libros que coinciden con algún autor de la lista.</returns>
         public List<Libro> ObtenerLibrosPorAutor(List<string> autores)
         {
             List<Libro> listaLibros = new List<Libro>();
@@ -141,6 +189,7 @@ namespace Datos.Controllers
 
             return listaLibros;
         }
+
         public List<Libro> ObtenerLibrosPorPrecio(List<int> precios)
         {
             List<Libro> listaLibros = new List<Libro>();

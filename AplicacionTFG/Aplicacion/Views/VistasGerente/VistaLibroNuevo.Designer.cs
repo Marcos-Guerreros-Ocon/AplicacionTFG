@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelFormulario = new Guna.UI2.WinForms.Guna2Panel();
-            this.numStock = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.numPrecio = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.txtAutor = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTitulo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbGenero = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.txtISBN = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAgregar = new Presentacion.Controllers.BotonPropio(this.components);
-            this.btnCancelar = new Presentacion.Controllers.BotonPropio(this.components);
             this.labelStock = new Presentacion.Controllers.LabelPropio();
+            this.numStock = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.labelPrecio = new Presentacion.Controllers.LabelPropio();
             this.labelAutor = new Presentacion.Controllers.LabelPropio();
             this.labelISBN = new Presentacion.Controllers.LabelPropio();
             this.labelTitulo = new Presentacion.Controllers.LabelPropio();
+            this.numPrecio = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.labelGenero = new Presentacion.Controllers.LabelPropio();
+            this.txtAutor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTitulo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbGenero = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.btnAgregar = new Presentacion.Controllers.BotonPropio(this.components);
+            this.btnCancelar = new Presentacion.Controllers.BotonPropio(this.components);
             this.panelFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
@@ -69,6 +69,35 @@
             this.panelFormulario.Size = new System.Drawing.Size(356, 293);
             this.panelFormulario.TabIndex = 0;
             // 
+            // txtISBN
+            // 
+            this.txtISBN.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtISBN.DefaultText = "";
+            this.txtISBN.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtISBN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtISBN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtISBN.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtISBN.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtISBN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtISBN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtISBN.Location = new System.Drawing.Point(148, 25);
+            this.txtISBN.Name = "txtISBN";
+            this.txtISBN.PasswordChar = '\0';
+            this.txtISBN.PlaceholderText = "";
+            this.txtISBN.SelectedText = "";
+            this.txtISBN.Size = new System.Drawing.Size(200, 36);
+            this.txtISBN.TabIndex = 15;
+            // 
+            // labelStock
+            // 
+            this.labelStock.AutoSize = true;
+            this.labelStock.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStock.Location = new System.Drawing.Point(56, 245);
+            this.labelStock.Name = "labelStock";
+            this.labelStock.Size = new System.Drawing.Size(41, 17);
+            this.labelStock.TabIndex = 14;
+            this.labelStock.Text = "Stock";
+            // 
             // numStock
             // 
             this.numStock.BackColor = System.Drawing.Color.Transparent;
@@ -84,6 +113,46 @@
             this.numStock.Size = new System.Drawing.Size(200, 36);
             this.numStock.TabIndex = 6;
             this.numStock.UpDownButtonFillColor = System.Drawing.Color.Coral;
+            // 
+            // labelPrecio
+            // 
+            this.labelPrecio.AutoSize = true;
+            this.labelPrecio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecio.Location = new System.Drawing.Point(56, 202);
+            this.labelPrecio.Name = "labelPrecio";
+            this.labelPrecio.Size = new System.Drawing.Size(46, 17);
+            this.labelPrecio.TabIndex = 13;
+            this.labelPrecio.Text = "Precio";
+            // 
+            // labelAutor
+            // 
+            this.labelAutor.AutoSize = true;
+            this.labelAutor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAutor.Location = new System.Drawing.Point(56, 160);
+            this.labelAutor.Name = "labelAutor";
+            this.labelAutor.Size = new System.Drawing.Size(43, 17);
+            this.labelAutor.TabIndex = 12;
+            this.labelAutor.Text = "Autor";
+            // 
+            // labelISBN
+            // 
+            this.labelISBN.AutoSize = true;
+            this.labelISBN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelISBN.Location = new System.Drawing.Point(56, 36);
+            this.labelISBN.Name = "labelISBN";
+            this.labelISBN.Size = new System.Drawing.Size(37, 17);
+            this.labelISBN.TabIndex = 9;
+            this.labelISBN.Text = "ISBN";
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.Location = new System.Drawing.Point(56, 118);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(45, 17);
+            this.labelTitulo.TabIndex = 11;
+            this.labelTitulo.Text = "Título";
             // 
             // numPrecio
             // 
@@ -105,6 +174,16 @@
             this.numPrecio.Size = new System.Drawing.Size(200, 36);
             this.numPrecio.TabIndex = 4;
             this.numPrecio.UpDownButtonFillColor = System.Drawing.Color.Coral;
+            // 
+            // labelGenero
+            // 
+            this.labelGenero.AutoSize = true;
+            this.labelGenero.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGenero.Location = new System.Drawing.Point(56, 77);
+            this.labelGenero.Name = "labelGenero";
+            this.labelGenero.Size = new System.Drawing.Size(52, 17);
+            this.labelGenero.TabIndex = 10;
+            this.labelGenero.Text = "Género";
             // 
             // txtAutor
             // 
@@ -165,48 +244,33 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // txtISBN
-            // 
-            this.txtISBN.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtISBN.DefaultText = "";
-            this.txtISBN.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtISBN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtISBN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtISBN.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtISBN.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtISBN.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtISBN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtISBN.Location = new System.Drawing.Point(148, 25);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.PasswordChar = '\0';
-            this.txtISBN.PlaceholderText = "";
-            this.txtISBN.SelectedText = "";
-            this.txtISBN.Size = new System.Drawing.Size(200, 36);
-            this.txtISBN.TabIndex = 15;
-            // 
             // btnAgregar
             // 
-            this.btnAgregar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregar.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAgregar.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.btnAgregar.BorderColor = System.Drawing.Color.Coral;
+            this.btnAgregar.BorderRadius = 0;
+            this.btnAgregar.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(392, 383);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(180, 45);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextColor = System.Drawing.Color.White;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancelar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancelar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancelar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancelar.FillColor = System.Drawing.Color.Brown;
+            this.btnCancelar.BackColor = System.Drawing.Color.Brown;
+            this.btnCancelar.BackgroundColor = System.Drawing.Color.Brown;
+            this.btnCancelar.BorderColor = System.Drawing.Color.Coral;
+            this.btnCancelar.BorderRadius = 0;
+            this.btnCancelar.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(206, 383);
@@ -214,67 +278,9 @@
             this.btnCancelar.Size = new System.Drawing.Size(180, 45);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextColor = System.Drawing.Color.White;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // labelStock
-            // 
-            this.labelStock.AutoSize = true;
-            this.labelStock.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStock.Location = new System.Drawing.Point(56, 245);
-            this.labelStock.Name = "labelStock";
-            this.labelStock.Size = new System.Drawing.Size(41, 17);
-            this.labelStock.TabIndex = 14;
-            this.labelStock.Text = "Stock";
-            // 
-            // labelPrecio
-            // 
-            this.labelPrecio.AutoSize = true;
-            this.labelPrecio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecio.Location = new System.Drawing.Point(56, 202);
-            this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(46, 17);
-            this.labelPrecio.TabIndex = 13;
-            this.labelPrecio.Text = "Precio";
-            // 
-            // labelAutor
-            // 
-            this.labelAutor.AutoSize = true;
-            this.labelAutor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAutor.Location = new System.Drawing.Point(56, 160);
-            this.labelAutor.Name = "labelAutor";
-            this.labelAutor.Size = new System.Drawing.Size(43, 17);
-            this.labelAutor.TabIndex = 12;
-            this.labelAutor.Text = "Autor";
-            // 
-            // labelISBN
-            // 
-            this.labelISBN.AutoSize = true;
-            this.labelISBN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelISBN.Location = new System.Drawing.Point(56, 36);
-            this.labelISBN.Name = "labelISBN";
-            this.labelISBN.Size = new System.Drawing.Size(37, 17);
-            this.labelISBN.TabIndex = 9;
-            this.labelISBN.Text = "ISBN";
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(56, 118);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(45, 17);
-            this.labelTitulo.TabIndex = 11;
-            this.labelTitulo.Text = "Título";
-            // 
-            // labelGenero
-            // 
-            this.labelGenero.AutoSize = true;
-            this.labelGenero.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenero.Location = new System.Drawing.Point(56, 77);
-            this.labelGenero.Name = "labelGenero";
-            this.labelGenero.Size = new System.Drawing.Size(52, 17);
-            this.labelGenero.TabIndex = 10;
-            this.labelGenero.Text = "Género";
             // 
             // VistaLibroNuevo
             // 
