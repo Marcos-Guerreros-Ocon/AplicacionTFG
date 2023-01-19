@@ -30,6 +30,47 @@ namespace Datos.Controllers
         }
 
         /// <summary>
+        /// Método para obtener todos los vendedores que existen.
+        /// </summary>
+        /// <returns>Devuelve una lista de vendedores.</returns>
+        public List<Usuario> ObtenerVendedores()
+        {
+            WebResponse res = HttpConnection.Send(null, "GET", "api/Usuario");
+            string json = HttpConnection.ResponseToJson(res);
+            List<Usuario> lista = JsonSerializer.Deserialize<List<Usuario>>(json);
+            List<Usuario> vendedores = new List<Usuario>();
+
+            foreach (Usuario usuario in lista)
+            {
+                if (!usuario.tipo.Equals("gerente"))
+                {
+                    vendedores.Add(usuario);
+                }
+            }
+
+            return lista;
+        }
+
+        /// <summary>
+        /// Método encargado de obtener un listado de vendedores que contenga la busqueda indicada.
+        /// </summary>
+        /// <param name="busqueda">Busqueda por la que queramos que compruebes los campos del vendedor.</param>
+        /// <returns>Devuelve una lista de vendedores que contengan la busqueda indicada.</returns>
+        public List<Usuario> ObtenerVendedoresBusqueda(string busqueda)
+        {
+            List<Usuario> lista = ObtenerVendedores();
+            List<Usuario> vendedores = new List<Usuario>();
+            foreach (Usuario usuario in lista)
+            {
+                if (usuario.nombre.Contains(busqueda) || usuario.apellidos.Contains(busqueda) || usuario.correo.Contains(busqueda))
+                {
+                    vendedores.Add(usuario);
+                }
+            }
+            return vendedores;
+        }
+
+        /// <summary>
         /// Método para obtener un usario con el id indicado.
         /// </summary>
         /// <param name="id">Id del usuario que queremos obtener.</param>

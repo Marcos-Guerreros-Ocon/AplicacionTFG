@@ -103,10 +103,13 @@ namespace Presentacion.Views.VistasGerente
 
         private void btnVendedores_Click(object sender, EventArgs e)
         {
+            labelTitulo.Text = "Vendedores";
             if (!panelVendedores.Visible)
             {
                 MostrarSubCategorias();
                 showSubMenu(panelVendedores);
+                VistaVendedoresGerente vistaVendedoresGerente = new VistaVendedoresGerente();
+                openChildForm(vistaVendedoresGerente);
             }
         }
 

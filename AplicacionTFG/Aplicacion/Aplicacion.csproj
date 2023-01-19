@@ -134,6 +134,24 @@
     <Compile Include="Views\VistasGerente\VistaLibrosGerente.Designer.cs">
       <DependentUpon>VistaLibrosGerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\VistasGerente\VistaVendedoresGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VistasGerente\VistaVendedoresGerente.Designer.cs">
+      <DependentUpon>VistaVendedoresGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VistasGerente\VistaVendedorGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VistasGerente\VistaVendedorGerente.Designer.cs">
+      <DependentUpon>VistaVendedorGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VistasGerente\VistaVendedorNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VistasGerente\VistaVendedorNuevo.Designer.cs">
+      <DependentUpon>VistaVendedorNuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\VistasGerente\VistaVentasGerente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +197,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\VistasGerente\VistaLibrosGerente.resx">
       <DependentUpon>VistaLibrosGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VistasGerente\VistaVendedoresGerente.resx">
+      <DependentUpon>VistaVendedoresGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VistasGerente\VistaVendedorGerente.resx">
+      <DependentUpon>VistaVendedorGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VistasGerente\VistaVendedorNuevo.resx">
+      <DependentUpon>VistaVendedorNuevo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\VistasGerente\VistaVentasGerente.resx">
       <DependentUpon>VistaVentasGerente.cs</DependentUpon>

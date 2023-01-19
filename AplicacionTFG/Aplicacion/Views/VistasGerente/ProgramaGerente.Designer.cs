@@ -34,7 +34,6 @@
             this.btnGeneros = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelVendedores = new System.Windows.Forms.Panel();
-            this.btnSolicitudesRechazadas = new System.Windows.Forms.Button();
             this.btnSolicitudesAprobadas = new System.Windows.Forms.Button();
             this.btnVendedores = new System.Windows.Forms.Button();
             this.panelVentas = new System.Windows.Forms.Panel();
@@ -91,7 +90,7 @@
             this.btnGeneros.FlatAppearance.BorderSize = 0;
             this.btnGeneros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGeneros.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGeneros.Location = new System.Drawing.Point(0, 778);
+            this.btnGeneros.Location = new System.Drawing.Point(0, 735);
             this.btnGeneros.Name = "btnGeneros";
             this.btnGeneros.Size = new System.Drawing.Size(250, 50);
             this.btnGeneros.TabIndex = 8;
@@ -117,27 +116,12 @@
             // panelVendedores
             // 
             this.panelVendedores.BackColor = System.Drawing.Color.DarkSalmon;
-            this.panelVendedores.Controls.Add(this.btnSolicitudesRechazadas);
             this.panelVendedores.Controls.Add(this.btnSolicitudesAprobadas);
             this.panelVendedores.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelVendedores.Location = new System.Drawing.Point(0, 678);
             this.panelVendedores.Name = "panelVendedores";
-            this.panelVendedores.Size = new System.Drawing.Size(250, 100);
+            this.panelVendedores.Size = new System.Drawing.Size(250, 57);
             this.panelVendedores.TabIndex = 6;
-            // 
-            // btnSolicitudesRechazadas
-            // 
-            this.btnSolicitudesRechazadas.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnSolicitudesRechazadas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSolicitudesRechazadas.FlatAppearance.BorderSize = 0;
-            this.btnSolicitudesRechazadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolicitudesRechazadas.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSolicitudesRechazadas.Location = new System.Drawing.Point(0, 50);
-            this.btnSolicitudesRechazadas.Name = "btnSolicitudesRechazadas";
-            this.btnSolicitudesRechazadas.Size = new System.Drawing.Size(250, 50);
-            this.btnSolicitudesRechazadas.TabIndex = 1;
-            this.btnSolicitudesRechazadas.Text = "Configuación";
-            this.btnSolicitudesRechazadas.UseVisualStyleBackColor = false;
             // 
             // btnSolicitudesAprobadas
             // 
@@ -433,7 +417,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelVendedores;
-        private System.Windows.Forms.Button btnSolicitudesRechazadas;
         private System.Windows.Forms.Button btnSolicitudesAprobadas;
         private System.Windows.Forms.Button btnVendedores;
         private System.Windows.Forms.Panel panelVentas;

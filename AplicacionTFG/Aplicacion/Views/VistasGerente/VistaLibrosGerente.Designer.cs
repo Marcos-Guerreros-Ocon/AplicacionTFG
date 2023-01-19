@@ -291,7 +291,6 @@
             this.Controls.Add(this.boton);
             this.Controls.Add(this.txtBuscar);
             this.Name = "VistaLibrosGerente";
-            this.Text = "Dispositivos";
             ((System.ComponentModel.ISupportInitialize)(this.tablaLibros)).EndInit();
             this.ResumeLayout(false);
 
