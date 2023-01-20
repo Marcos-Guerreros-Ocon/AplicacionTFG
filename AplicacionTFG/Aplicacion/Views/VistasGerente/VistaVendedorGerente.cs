@@ -1,12 +1,6 @@
-﻿using Datos.Models;
+﻿using Datos.Controllers;
+using Datos.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.Views.VistasGerente
@@ -21,7 +15,55 @@ namespace Presentacion.Views.VistasGerente
 
         private void CargarDatos(int id)
         {
-            
+            Usuario usuario = new UsuarioController().ObtenerUsuario(id);
+            txtIdUsuario.Text = usuario.idUsuario.ToString();
+            txtCorreo.Text = usuario.correo;
+            txtNombre.Text = usuario.nombre;
+            txtApellidos.Text = usuario.apellidos;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            bool exito = new UsuarioController().BorrarUsuario(Int32.Parse(txtIdUsuario.Text));
+            if (!exito)
+            {
+                MostrarMensajeError("Error al borrar el vendedor");
+                return;
+            }
+            MostrarMensajeInfo("Vendedor borrado con exito");
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario()
+            {
+                idUsuario = Int32.Parse(txtIdUsuario.Text),
+                nombre = txtNombre.Text,
+                apellidos = txtApellidos.Text,
+                correo = txtCorreo.Text
+            };
+
+            bool exito = new UsuarioController().ModificarUsuario(usuario);
+            if (!exito)
+            {
+                MostrarMensajeError("Error al modificar los datos del vendedor");
+                return;
+            }
+            MostrarMensajeInfo("Los datos del vendedor se han modificado correctamente");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MostrarMensajeError(string msg)
+        {
+            MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void MostrarMensajeInfo(string msg)
+        {
+            MessageBox.Show(msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

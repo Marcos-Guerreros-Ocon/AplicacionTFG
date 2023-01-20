@@ -73,23 +73,33 @@ namespace Presentacion.Views.VistasGerente
         private void botonModificar_Click(object sender, EventArgs e)
         {
             Genero genero = new GeneroController().ObtenerGenero(cbGenero.SelectedItem.ToString());
-            Libro libro= new Libro()
+            Libro libro = new Libro()
             {
-                isbn=txtISBN.Text,
-                idGenero=genero.idGenero,
-                titulo=txtTitulo.Text,
-                autor=txtAutor.Text,
+                isbn = txtISBN.Text,
+                idGenero = genero.idGenero,
+                titulo = txtTitulo.Text,
+                autor = txtAutor.Text,
                 precio = (int)numPrecio.Value,
                 stock = (int)numStock.Value
             };
             bool exito = new LibrosController().ModificarLibro(libro);
             if (!exito)
             {
-                MessageBox.Show("Error al modificar el libro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MostrarMensajeError("Error al modificar el libro");
                 return;
             }
+            MostrarMensajeInfo("Libro modificado con exito");
 
-            MessageBox.Show("Libro modificado con exito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void MostrarMensajeError(string msg)
+        {
+            MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void MostrarMensajeInfo(string msg)
+        {
+            MessageBox.Show(msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
+
+
 }

@@ -113,11 +113,16 @@ namespace Datos.Controllers
         {
             try
             {
-                Usuario usu = ObtenerUsuario(usuario.correo);
+                Usuario usu = ObtenerUsuario(usuario.idUsuario);
 
                 if (usu == null)
                 {
                     return false;
+                }
+
+                if (usuario.contrasenia==null)
+                {
+                    usuario.contrasenia = usu.contrasenia;
                 }
 
                 usuario.tipo = "Vendedor";
@@ -163,11 +168,11 @@ namespace Datos.Controllers
         /// </summary>
         /// <param name="correo">Correo del usuario que queremos borrar.</param>
         /// <returns>Devuelve true en caso de borrarlo y false en caso contrario.</returns>
-        public bool BorrarUsuario(string correo)
+        public bool BorrarUsuario(int idUsuario)
         {
             try
             {
-                Usuario usu = ObtenerUsuario(correo);
+                Usuario usu = ObtenerUsuario(idUsuario);
 
                 if (usu == null)
                 {
@@ -175,7 +180,7 @@ namespace Datos.Controllers
                 }
 
 
-                WebResponse res = HttpConnection.Send(null, "DELETE", $"api/Usuario/{correo}");
+                WebResponse res = HttpConnection.Send(null, "DELETE", $"api/Usuario/{idUsuario}");
                 string json = HttpConnection.ResponseToJson(res);
                 return true;
             }

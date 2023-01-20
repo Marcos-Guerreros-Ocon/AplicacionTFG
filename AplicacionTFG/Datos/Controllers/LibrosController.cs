@@ -190,6 +190,7 @@ namespace Datos.Controllers
             return listaLibros;
         }
 
+        /*
         public List<Libro> ObtenerLibrosPorPrecio(List<int> precios)
         {
             List<Libro> listaLibros = new List<Libro>();
@@ -228,7 +229,7 @@ namespace Datos.Controllers
 
             return listaLibros;
         }
-
+        */
 
     }
 }

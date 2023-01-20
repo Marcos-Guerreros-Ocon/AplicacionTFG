@@ -94,6 +94,7 @@ namespace Presentacion.Views.VistasGerente
         // BOTONES PARA VENTAS Y VENDEDORES
         private void btnVentas_Click(object sender, EventArgs e)
         {
+            openChildForm(new VistaVentasGerente());
             if (!panelVentas.Visible)
             {
                 MostrarSubCategorias();
@@ -104,12 +105,11 @@ namespace Presentacion.Views.VistasGerente
         private void btnVendedores_Click(object sender, EventArgs e)
         {
             labelTitulo.Text = "Vendedores";
+            openChildForm(new VistaVendedoresGerente());
             if (!panelVendedores.Visible)
             {
                 MostrarSubCategorias();
-                showSubMenu(panelVendedores);
-                VistaVendedoresGerente vistaVendedoresGerente = new VistaVendedoresGerente();
-                openChildForm(vistaVendedoresGerente);
+                showSubMenu(panelVendedores);               
             }
         }
 

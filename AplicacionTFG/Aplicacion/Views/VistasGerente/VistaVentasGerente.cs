@@ -17,7 +17,21 @@ namespace Presentacion.Views.VistasGerente
         public VistaVentasGerente()
         {
             InitializeComponent();
+            CargarTabla();
 
+        }
+
+        private void CargarTabla()
+        {
+            List<Venta>ventas = new VentaController().ObtenerVentas();
+            Usuario usuario;
+            Libro libro;
+            foreach (Venta venta in ventas)
+            {
+                usuario = new UsuarioController().ObtenerUsuario(venta.idUsuario);
+                libro = new LibrosController().ObtenerLibro(venta.isbn);
+                tablaVentas.Rows.Add(libro.isbn,libro.titulo,libro.autor,usuario.nombre,usuario.apellidos,usuario.correo);
+            }
         }
     }
 }

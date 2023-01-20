@@ -1,4 +1,6 @@
-﻿namespace Datos.Models
+﻿using System;
+
+namespace Datos.Models
 {
     /// <summary>
     /// Clase Usuario.
@@ -34,5 +36,6 @@
         /// Campo tipo con sus getters y setters.
         /// </summary>
         public string tipo { get; set; }
+
     }
 }
