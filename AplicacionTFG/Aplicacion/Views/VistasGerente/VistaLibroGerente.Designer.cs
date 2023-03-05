@@ -46,6 +46,7 @@
             this.botonModificar = new Presentacion.Controllers.BotonPropio(this.components);
             this.btnBorrar = new Presentacion.Controllers.BotonPropio(this.components);
             this.btnCancelar = new Presentacion.Controllers.BotonPropio(this.components);
+            this.resultado = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.panelFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
@@ -303,6 +304,15 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // resultado
+            // 
+            this.resultado.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.resultado.Caption = null;
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.resultado.Parent = null;
+            this.resultado.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.resultado.Text = null;
+            // 
             // VistaLibroGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,5 +353,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2TextBox txtISBN;
         private Controllers.BotonPropio botonModificar;
+        private Guna.UI2.WinForms.Guna2MessageDialog resultado;
     }
 }

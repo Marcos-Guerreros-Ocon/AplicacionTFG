@@ -44,33 +44,34 @@ namespace Presentacion.Views.VistasGerente
             bool exito = new UsuarioController().InsertarUsuario(usuario);
             if (!exito)
             {
-                MostarMensajeError("No se ha podido crear el usuario");
+                MostrarMensajeError("No se ha podido crear el usuario");
+                this.Close();
                 return;
             }
 
-            MostarMensajeInfo("Usuario creado con exito");
+            MostrarMensajeInfo("Usuario creado con exito");
 
         }
         private bool ComprobarCampos()
         {
             if (!CampoTextoCorrecto(txtCorreo.Text))
             {
-                MostarMensajeError("Campo correo vacio");
+                MostrarMensajeError("Campo correo vacio");
                 return false;
             }
             if (!CampoTextoCorrecto(txtNombre.Text))
             {
-                MostarMensajeError("Campo nombre vacio");
+                MostrarMensajeError("Campo nombre vacio");
                 return false;
             }
             if (!CampoTextoCorrecto(txtApellidos.Text))
             {
-                MostarMensajeError("Campo Apellidos vacio");
+                MostrarMensajeError("Campo Apellidos vacio");
                 return false;
             }
             if (!CampoTextoCorrecto(txtContrasenia.Text))
             {
-                MostarMensajeError("Campo contraseña vacio");
+                MostrarMensajeError("Campo contraseña vacio");
                 return false;
             }
             return true;
@@ -81,13 +82,19 @@ namespace Presentacion.Views.VistasGerente
             return !texto.Trim().Equals("");
         }
 
-        private void MostarMensajeError(string msg)
+        private void MostrarMensajeError(string msg)
         {
-            MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.resultado.Caption = "Error";
+            this.resultado.Text = msg;
+            this.resultado.Show();
         }
-        private void MostarMensajeInfo(string msg)
+        private void MostrarMensajeInfo(string msg)
         {
-            MessageBox.Show(msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.resultado.Caption = "Info";
+            this.resultado.Text = msg;
+            this.resultado.Show();
         }
         private string CifrarContraseña(string contraseña)
         {

@@ -170,7 +170,7 @@ namespace Presentacion.Views.VistasVendedor
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(250, 50);
             this.btnVentas.TabIndex = 4;
-            this.btnVentas.Text = "Ventas";
+            this.btnVentas.Text = "Mis Ventas";
             this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 

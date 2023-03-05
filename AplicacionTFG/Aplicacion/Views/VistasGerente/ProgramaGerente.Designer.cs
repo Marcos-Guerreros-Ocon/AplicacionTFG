@@ -54,6 +54,7 @@
             this.panelFormulario = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelTitulo = new Presentacion.Controllers.LabelPropio();
+            this.panelGeneros = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelVendedores.SuspendLayout();
             this.panelVentas.SuspendLayout();
@@ -67,6 +68,7 @@
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.Coral;
+            this.panelMenu.Controls.Add(this.panelGeneros);
             this.panelMenu.Controls.Add(this.btnGeneros);
             this.panelMenu.Controls.Add(this.btnSalir);
             this.panelMenu.Controls.Add(this.panelVendedores);
@@ -385,6 +387,13 @@
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Titulo";
             // 
+            // panelGeneros
+            // 
+            this.panelGeneros.Location = new System.Drawing.Point(0, 773);
+            this.panelGeneros.Name = "panelGeneros";
+            this.panelGeneros.Size = new System.Drawing.Size(247, 12);
+            this.panelGeneros.TabIndex = 9;
+            // 
             // ProgramaGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,5 +449,6 @@
         private System.Windows.Forms.Panel panelFormulario;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Controllers.LabelPropio labelTitulo;
+        private System.Windows.Forms.Panel panelGeneros;
     }
 }

@@ -63,15 +63,69 @@ namespace Presentacion.Views.VistasGerente
             bool exito = new LibrosController().BorrarLibro(txtISBN.Text);
             if (!exito)
             {
-                MessageBox.Show("Error al borrar el libro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MostrarMensajeError("Error al borrar el libro");
+                this.Close();
                 return;
             }
 
-            MessageBox.Show("Libro borrado con exito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MostrarMensajeInfo("Libro borrado con exito");
+            this.Close();
         }
 
+        private bool comprobarCampos()
+        {
+            if (!CampoTextoCorrecto(this.txtISBN.Text))
+            {
+                MostrarMensajeInfo("El campo ISBN no puede estar vacio");
+                return false;
+            }
+
+            if (!CampoTextoCorrecto(this.txtTitulo.Text))
+            {
+                MostrarMensajeInfo("El campo Título no puede estar vacio");
+                return false;
+            }
+            if (!CampoTextoCorrecto(this.cbGenero.SelectedItem.ToString()))
+            {
+                MostrarMensajeInfo("El campo Género no puede estar vacio");
+                return false;
+            }
+
+            if (!CampoNumeroCorrecto((int)this.numStock.Value))
+            {
+                MostrarMensajeInfo("El campo Stock no puede ser inferior a 0");
+                return false;
+            }
+
+            if (!CampoNumeroCorrecto((int)this.numPrecio.Value))
+            {
+                MostrarMensajeInfo("El campo Precio no puede ser inferior a 0");
+                return false;
+            }
+            if (!CampoTextoCorrecto(this.txtAutor.Text))
+            {
+                MostrarMensajeInfo("El campo Autor no puede estar vacio");
+                return false;
+            }
+
+            return true;
+
+        }
+        private bool CampoTextoCorrecto(string texto)
+        {
+            return !texto.Trim().Equals("");
+        }
+
+        private bool CampoNumeroCorrecto(int numero)
+        {
+            return numero >= 1;
+        }
         private void botonModificar_Click(object sender, EventArgs e)
         {
+            if (!this.comprobarCampos())
+            {
+                return;
+            }
             Genero genero = new GeneroController().ObtenerGenero(cbGenero.SelectedItem.ToString());
             Libro libro = new Libro()
             {
@@ -93,11 +147,17 @@ namespace Presentacion.Views.VistasGerente
         }
         private void MostrarMensajeError(string msg)
         {
-            MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.resultado.Caption = "Error";
+            this.resultado.Text = msg;
+            this.resultado.Show();
         }
         private void MostrarMensajeInfo(string msg)
         {
-            MessageBox.Show(msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.resultado.Caption = "Info";
+            this.resultado.Text = msg;
+            this.resultado.Show();
         }
     }
 

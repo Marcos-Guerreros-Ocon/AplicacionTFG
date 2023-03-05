@@ -112,13 +112,30 @@ namespace Presentacion.Views.VistasGerente
                 showSubMenu(panelVendedores);               
             }
         }
+        private void btnGeneros_Click(object sender, EventArgs e)
+        {
+            this.labelTitulo.Text = "Generos";
 
+            if (!panelGeneros.Visible)
+            {
+                showSubMenu(panelGeneros);
+            }
+
+            VistaGenerosGerente vistaGenerosGerente = new VistaGenerosGerente();
+            openChildForm(vistaGenerosGerente);
+        }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+             
         // FUNCIONES VARIAS PARA HACER DINAMICO EL MENU
         private void customizeDesing()
         {
             panelLibros.Visible = false;
             panelVentas.Visible = false;
             panelVendedores.Visible = false;
+            panelGeneros.Visible = false;
 
         }
         private void hideSubMenu()
@@ -134,6 +151,10 @@ namespace Presentacion.Views.VistasGerente
             if (panelVendedores.Visible == true)
             {
                 panelVendedores.Visible = false;
+            }
+            if (panelGeneros.Visible == true)
+            {
+                panelGeneros.Visible = false;
             }
 
         }
@@ -232,16 +253,6 @@ namespace Presentacion.Views.VistasGerente
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void btnGeneros_Click(object sender, EventArgs e)
-        {
-            this.labelTitulo.Text = "Generos";
-            VistaGenerosGerente vistaGenerosGerente = new VistaGenerosGerente();
-            openChildForm(vistaGenerosGerente);
-        }
     }
 }

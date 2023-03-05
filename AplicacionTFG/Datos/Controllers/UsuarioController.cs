@@ -40,7 +40,7 @@ namespace Datos.Controllers
             List<Usuario> lista = JsonSerializer.Deserialize<List<Usuario>>(json);
             List<Usuario> vendedores = new List<Usuario>();
 
-            foreach (Usuario usuario in lista)
+              foreach (Usuario usuario in lista)
             {
                 if (!usuario.tipo.Equals("gerente"))
                 {
@@ -48,7 +48,7 @@ namespace Datos.Controllers
                 }
             }
 
-            return lista;
+            return vendedores;
         }
 
         /// <summary>
@@ -165,8 +165,8 @@ namespace Datos.Controllers
 
         /// <summary>
         /// Método para borrar un usuario.
-        /// </summary>
-        /// <param name="correo">Correo del usuario que queremos borrar.</param>
+        /// </summary>s
+        /// <param name="idUsuario">Correo del usuario que queremos borrar.</param>
         /// <returns>Devuelve true en caso de borrarlo y false en caso contrario.</returns>
         public bool BorrarUsuario(int idUsuario)
         {

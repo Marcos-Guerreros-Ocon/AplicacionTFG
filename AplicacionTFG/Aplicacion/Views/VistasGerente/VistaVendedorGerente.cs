@@ -35,6 +35,10 @@ namespace Presentacion.Views.VistasGerente
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (!this.ComprobarCampos())
+            {
+                return;
+            }
             Usuario usuario = new Usuario()
             {
                 idUsuario = Int32.Parse(txtIdUsuario.Text),
@@ -64,6 +68,36 @@ namespace Presentacion.Views.VistasGerente
         private void MostrarMensajeInfo(string msg)
         {
             MessageBox.Show(msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private bool ComprobarCampos()
+        {
+            if (!CampoTextoCorrecto(txtCorreo.Text))
+            {
+                MostrarMensajeError("Campo correo vacio");
+                return false;
+            }
+            if (!CampoTextoCorrecto(txtNombre.Text))
+            {
+                MostrarMensajeError("Campo nombre vacio");
+                return false;
+            }
+            if (!CampoTextoCorrecto(txtApellidos.Text))
+            {
+                MostrarMensajeError("Campo Apellidos vacio");
+                return false;
+            }
+            if (!CampoTextoCorrecto(txtContrasenia.Text))
+            {
+                MostrarMensajeError("Campo contraseña vacio");
+                return false;
+            }
+            return true;
+        }
+
+        private bool CampoTextoCorrecto(string texto)
+        {
+            return !texto.Trim().Equals("");
         }
     }
 }

@@ -31,20 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.panelFormulario = new Guna.UI2.WinForms.Guna2Panel();
             this.txtISBN = new Guna.UI2.WinForms.Guna2TextBox();
-            this.labelStock = new Presentacion.Controllers.LabelPropio();
             this.numStock = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.labelPrecio = new Presentacion.Controllers.LabelPropio();
-            this.labelAutor = new Presentacion.Controllers.LabelPropio();
-            this.labelISBN = new Presentacion.Controllers.LabelPropio();
-            this.labelTitulo = new Presentacion.Controllers.LabelPropio();
             this.numPrecio = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.labelGenero = new Presentacion.Controllers.LabelPropio();
             this.txtAutor = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTitulo = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbGenero = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.resultado = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.btnAgregar = new Presentacion.Controllers.BotonPropio(this.components);
             this.btnCancelar = new Presentacion.Controllers.BotonPropio(this.components);
+            this.labelStock = new Presentacion.Controllers.LabelPropio();
+            this.labelPrecio = new Presentacion.Controllers.LabelPropio();
+            this.labelAutor = new Presentacion.Controllers.LabelPropio();
+            this.labelISBN = new Presentacion.Controllers.LabelPropio();
+            this.labelTitulo = new Presentacion.Controllers.LabelPropio();
+            this.labelGenero = new Presentacion.Controllers.LabelPropio();
             this.panelFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
@@ -88,16 +89,6 @@
             this.txtISBN.Size = new System.Drawing.Size(200, 36);
             this.txtISBN.TabIndex = 15;
             // 
-            // labelStock
-            // 
-            this.labelStock.AutoSize = true;
-            this.labelStock.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStock.Location = new System.Drawing.Point(56, 245);
-            this.labelStock.Name = "labelStock";
-            this.labelStock.Size = new System.Drawing.Size(41, 17);
-            this.labelStock.TabIndex = 14;
-            this.labelStock.Text = "Stock";
-            // 
             // numStock
             // 
             this.numStock.BackColor = System.Drawing.Color.Transparent;
@@ -113,46 +104,6 @@
             this.numStock.Size = new System.Drawing.Size(200, 36);
             this.numStock.TabIndex = 6;
             this.numStock.UpDownButtonFillColor = System.Drawing.Color.Coral;
-            // 
-            // labelPrecio
-            // 
-            this.labelPrecio.AutoSize = true;
-            this.labelPrecio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecio.Location = new System.Drawing.Point(56, 202);
-            this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(46, 17);
-            this.labelPrecio.TabIndex = 13;
-            this.labelPrecio.Text = "Precio";
-            // 
-            // labelAutor
-            // 
-            this.labelAutor.AutoSize = true;
-            this.labelAutor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAutor.Location = new System.Drawing.Point(56, 160);
-            this.labelAutor.Name = "labelAutor";
-            this.labelAutor.Size = new System.Drawing.Size(43, 17);
-            this.labelAutor.TabIndex = 12;
-            this.labelAutor.Text = "Autor";
-            // 
-            // labelISBN
-            // 
-            this.labelISBN.AutoSize = true;
-            this.labelISBN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelISBN.Location = new System.Drawing.Point(56, 36);
-            this.labelISBN.Name = "labelISBN";
-            this.labelISBN.Size = new System.Drawing.Size(37, 17);
-            this.labelISBN.TabIndex = 9;
-            this.labelISBN.Text = "ISBN";
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(56, 118);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(45, 17);
-            this.labelTitulo.TabIndex = 11;
-            this.labelTitulo.Text = "Título";
             // 
             // numPrecio
             // 
@@ -174,16 +125,6 @@
             this.numPrecio.Size = new System.Drawing.Size(200, 36);
             this.numPrecio.TabIndex = 4;
             this.numPrecio.UpDownButtonFillColor = System.Drawing.Color.Coral;
-            // 
-            // labelGenero
-            // 
-            this.labelGenero.AutoSize = true;
-            this.labelGenero.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenero.Location = new System.Drawing.Point(56, 77);
-            this.labelGenero.Name = "labelGenero";
-            this.labelGenero.Size = new System.Drawing.Size(52, 17);
-            this.labelGenero.TabIndex = 10;
-            this.labelGenero.Text = "Género";
             // 
             // txtAutor
             // 
@@ -244,6 +185,15 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // resultado
+            // 
+            this.resultado.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.resultado.Caption = null;
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.resultado.Parent = null;
+            this.resultado.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.resultado.Text = null;
+            // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.LimeGreen;
@@ -282,6 +232,66 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // labelStock
+            // 
+            this.labelStock.AutoSize = true;
+            this.labelStock.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStock.Location = new System.Drawing.Point(56, 245);
+            this.labelStock.Name = "labelStock";
+            this.labelStock.Size = new System.Drawing.Size(41, 17);
+            this.labelStock.TabIndex = 14;
+            this.labelStock.Text = "Stock";
+            // 
+            // labelPrecio
+            // 
+            this.labelPrecio.AutoSize = true;
+            this.labelPrecio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecio.Location = new System.Drawing.Point(56, 202);
+            this.labelPrecio.Name = "labelPrecio";
+            this.labelPrecio.Size = new System.Drawing.Size(46, 17);
+            this.labelPrecio.TabIndex = 13;
+            this.labelPrecio.Text = "Precio";
+            // 
+            // labelAutor
+            // 
+            this.labelAutor.AutoSize = true;
+            this.labelAutor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAutor.Location = new System.Drawing.Point(56, 160);
+            this.labelAutor.Name = "labelAutor";
+            this.labelAutor.Size = new System.Drawing.Size(43, 17);
+            this.labelAutor.TabIndex = 12;
+            this.labelAutor.Text = "Autor";
+            // 
+            // labelISBN
+            // 
+            this.labelISBN.AutoSize = true;
+            this.labelISBN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelISBN.Location = new System.Drawing.Point(56, 36);
+            this.labelISBN.Name = "labelISBN";
+            this.labelISBN.Size = new System.Drawing.Size(37, 17);
+            this.labelISBN.TabIndex = 9;
+            this.labelISBN.Text = "ISBN";
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.Location = new System.Drawing.Point(56, 118);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(45, 17);
+            this.labelTitulo.TabIndex = 11;
+            this.labelTitulo.Text = "Título";
+            // 
+            // labelGenero
+            // 
+            this.labelGenero.AutoSize = true;
+            this.labelGenero.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGenero.Location = new System.Drawing.Point(56, 77);
+            this.labelGenero.Name = "labelGenero";
+            this.labelGenero.Size = new System.Drawing.Size(52, 17);
+            this.labelGenero.TabIndex = 10;
+            this.labelGenero.Text = "Género";
+            // 
             // VistaLibroNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,5 +329,6 @@
         private Controllers.BotonPropio btnAgregar;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2TextBox txtISBN;
+        private Guna.UI2.WinForms.Guna2MessageDialog resultado;
     }
 }

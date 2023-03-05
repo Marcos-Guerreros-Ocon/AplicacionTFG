@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelFormulario = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtContrasenia = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelContraseña = new Presentacion.Controllers.LabelPropio();
             this.labelICorreo = new Presentacion.Controllers.LabelPropio();
@@ -40,7 +41,7 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnAgregar = new Presentacion.Controllers.BotonPropio(this.components);
             this.btnCancelar = new Presentacion.Controllers.BotonPropio(this.components);
-            this.txtContrasenia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.resultado = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.panelFormulario.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,26 @@
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(356, 216);
             this.panelFormulario.TabIndex = 0;
+            // 
+            // txtContrasenia
+            // 
+            this.txtContrasenia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContrasenia.DefaultText = "";
+            this.txtContrasenia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtContrasenia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtContrasenia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContrasenia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContrasenia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContrasenia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtContrasenia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContrasenia.Location = new System.Drawing.Point(148, 151);
+            this.txtContrasenia.Name = "txtContrasenia";
+            this.txtContrasenia.PasswordChar = '●';
+            this.txtContrasenia.PlaceholderText = "";
+            this.txtContrasenia.SelectedText = "";
+            this.txtContrasenia.Size = new System.Drawing.Size(200, 36);
+            this.txtContrasenia.TabIndex = 16;
+            this.txtContrasenia.UseSystemPasswordChar = true;
             // 
             // txtCorreo
             // 
@@ -200,25 +221,14 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtContrasenia
+            // resultado
             // 
-            this.txtContrasenia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContrasenia.DefaultText = "";
-            this.txtContrasenia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtContrasenia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtContrasenia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtContrasenia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtContrasenia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasenia.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtContrasenia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasenia.Location = new System.Drawing.Point(148, 151);
-            this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.PasswordChar = '●';
-            this.txtContrasenia.PlaceholderText = "";
-            this.txtContrasenia.SelectedText = "";
-            this.txtContrasenia.Size = new System.Drawing.Size(200, 36);
-            this.txtContrasenia.TabIndex = 16;
-            this.txtContrasenia.UseSystemPasswordChar = true;
+            this.resultado.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.resultado.Caption = null;
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.resultado.Parent = null;
+            this.resultado.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.resultado.Text = null;
             // 
             // VistaVendedorNuevo
             // 
@@ -240,16 +250,19 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel panelFormulario;
-        private Guna.UI2.WinForms.Guna2TextBox txtApellidos;
+        private Guna.UI2.WinForms.Guna2TextBox txtCorreo;
         private Guna.UI2.WinForms.Guna2TextBox txtNombre;
-        private Controllers.LabelPropio labelApellidos;
-        private Controllers.LabelPropio labelNombre;
+        private Guna.UI2.WinForms.Guna2TextBox txtApellidos;
+        private Guna.UI2.WinForms.Guna2TextBox txtContrasenia;
+
         private Controllers.LabelPropio labelICorreo;
+        private Controllers.LabelPropio labelNombre;
+        private Controllers.LabelPropio labelApellidos;      
         private Controllers.LabelPropio labelContraseña;
+
         private Controllers.BotonPropio btnCancelar;
         private Controllers.BotonPropio btnAgregar;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2TextBox txtCorreo;
-        private Guna.UI2.WinForms.Guna2TextBox txtContrasenia;
+        private Guna.UI2.WinForms.Guna2MessageDialog resultado;
     }
 }
