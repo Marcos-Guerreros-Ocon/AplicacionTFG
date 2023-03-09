@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.boton = new Guna.UI2.WinForms.Guna2Button();
-            this.btnFiltroModelo = new Guna.UI2.WinForms.Guna2Button();
-            this.btnFiltroMarca = new Guna.UI2.WinForms.Guna2Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnFiltroGenero = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFiltroPrecio = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFiltroAutor = new Guna.UI2.WinForms.Guna2Button();
             this.btnReiniciar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnFiltroLocalizacion = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFiltroStock = new Guna.UI2.WinForms.Guna2Button();
             this.tablaLibros = new Guna.UI2.WinForms.Guna2DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,53 +49,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablaLibros)).BeginInit();
             this.SuspendLayout();
             // 
-            // boton
+            // btnFiltroGenero
             // 
-            this.boton.BorderRadius = 10;
-            this.boton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.boton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.boton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.boton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.boton.FillColor = System.Drawing.Color.Coral;
-            this.boton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.boton.ForeColor = System.Drawing.Color.White;
-            this.boton.Location = new System.Drawing.Point(90, 50);
-            this.boton.Name = "boton";
-            this.boton.Size = new System.Drawing.Size(120, 45);
-            this.boton.TabIndex = 10;
-            this.boton.Text = "Genero";
+            this.btnFiltroGenero.BorderRadius = 10;
+            this.btnFiltroGenero.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroGenero.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroGenero.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFiltroGenero.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFiltroGenero.FillColor = System.Drawing.Color.Coral;
+            this.btnFiltroGenero.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnFiltroGenero.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroGenero.Location = new System.Drawing.Point(90, 50);
+            this.btnFiltroGenero.Name = "btnFiltroGenero";
+            this.btnFiltroGenero.Size = new System.Drawing.Size(120, 45);
+            this.btnFiltroGenero.TabIndex = 10;
+            this.btnFiltroGenero.Text = "Genero";
+            this.btnFiltroGenero.Click += new System.EventHandler(this.btnFiltroGenero_Click);
             // 
-            // btnFiltroModelo
+            // btnFiltroPrecio
             // 
-            this.btnFiltroModelo.BorderRadius = 10;
-            this.btnFiltroModelo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltroModelo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltroModelo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFiltroModelo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFiltroModelo.FillColor = System.Drawing.Color.Coral;
-            this.btnFiltroModelo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnFiltroModelo.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroModelo.Location = new System.Drawing.Point(350, 50);
-            this.btnFiltroModelo.Name = "btnFiltroModelo";
-            this.btnFiltroModelo.Size = new System.Drawing.Size(120, 45);
-            this.btnFiltroModelo.TabIndex = 11;
-            this.btnFiltroModelo.Text = "Precio";
+            this.btnFiltroPrecio.BorderRadius = 10;
+            this.btnFiltroPrecio.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroPrecio.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroPrecio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFiltroPrecio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFiltroPrecio.FillColor = System.Drawing.Color.Coral;
+            this.btnFiltroPrecio.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnFiltroPrecio.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroPrecio.Location = new System.Drawing.Point(350, 50);
+            this.btnFiltroPrecio.Name = "btnFiltroPrecio";
+            this.btnFiltroPrecio.Size = new System.Drawing.Size(120, 45);
+            this.btnFiltroPrecio.TabIndex = 11;
+            this.btnFiltroPrecio.Text = "Precio";
+            this.btnFiltroPrecio.Click += new System.EventHandler(this.btnFiltroPrecio_Click);
             // 
-            // btnFiltroMarca
+            // btnFiltroAutor
             // 
-            this.btnFiltroMarca.BorderRadius = 10;
-            this.btnFiltroMarca.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltroMarca.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltroMarca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFiltroMarca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFiltroMarca.FillColor = System.Drawing.Color.Coral;
-            this.btnFiltroMarca.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnFiltroMarca.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroMarca.Location = new System.Drawing.Point(220, 50);
-            this.btnFiltroMarca.Name = "btnFiltroMarca";
-            this.btnFiltroMarca.Size = new System.Drawing.Size(120, 45);
-            this.btnFiltroMarca.TabIndex = 12;
-            this.btnFiltroMarca.Text = "Autor";
+            this.btnFiltroAutor.BorderRadius = 10;
+            this.btnFiltroAutor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroAutor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroAutor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFiltroAutor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFiltroAutor.FillColor = System.Drawing.Color.Coral;
+            this.btnFiltroAutor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnFiltroAutor.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroAutor.Location = new System.Drawing.Point(220, 50);
+            this.btnFiltroAutor.Name = "btnFiltroAutor";
+            this.btnFiltroAutor.Size = new System.Drawing.Size(120, 45);
+            this.btnFiltroAutor.TabIndex = 12;
+            this.btnFiltroAutor.Text = "Autor";
+            this.btnFiltroAutor.Click += new System.EventHandler(this.btnFiltroAutor_Click);
             // 
             // btnReiniciar
             // 
@@ -114,21 +117,22 @@
             this.btnReiniciar.Text = "Reiniciar";
             this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
-            // btnFiltroLocalizacion
+            // btnFiltroStock
             // 
-            this.btnFiltroLocalizacion.BorderRadius = 10;
-            this.btnFiltroLocalizacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltroLocalizacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltroLocalizacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFiltroLocalizacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFiltroLocalizacion.FillColor = System.Drawing.Color.Coral;
-            this.btnFiltroLocalizacion.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnFiltroLocalizacion.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroLocalizacion.Location = new System.Drawing.Point(480, 50);
-            this.btnFiltroLocalizacion.Name = "btnFiltroLocalizacion";
-            this.btnFiltroLocalizacion.Size = new System.Drawing.Size(120, 45);
-            this.btnFiltroLocalizacion.TabIndex = 15;
-            this.btnFiltroLocalizacion.Text = "Stock";
+            this.btnFiltroStock.BorderRadius = 10;
+            this.btnFiltroStock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroStock.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroStock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFiltroStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFiltroStock.FillColor = System.Drawing.Color.Coral;
+            this.btnFiltroStock.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnFiltroStock.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroStock.Location = new System.Drawing.Point(480, 50);
+            this.btnFiltroStock.Name = "btnFiltroStock";
+            this.btnFiltroStock.Size = new System.Drawing.Size(120, 45);
+            this.btnFiltroStock.TabIndex = 15;
+            this.btnFiltroStock.Text = "Stock";
+            this.btnFiltroStock.Click += new System.EventHandler(this.btnFiltroStock_Click);
             // 
             // tablaLibros
             // 
@@ -136,17 +140,17 @@
             this.tablaLibros.AllowUserToDeleteRows = false;
             this.tablaLibros.AllowUserToResizeColumns = false;
             this.tablaLibros.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tablaLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tablaLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.tablaLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.NumSerie,
@@ -155,14 +159,14 @@
             this.Localizacion,
             this.Estado,
             this.btnReservar});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaLibros.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaLibros.DefaultCellStyle = dataGridViewCellStyle12;
             this.tablaLibros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(209)))), ((int)(((byte)(177)))));
             this.tablaLibros.Location = new System.Drawing.Point(90, 228);
             this.tablaLibros.MultiSelect = false;
@@ -284,11 +288,11 @@
             this.ClientSize = new System.Drawing.Size(934, 691);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.tablaLibros);
-            this.Controls.Add(this.btnFiltroLocalizacion);
+            this.Controls.Add(this.btnFiltroStock);
             this.Controls.Add(this.btnReiniciar);
-            this.Controls.Add(this.btnFiltroMarca);
-            this.Controls.Add(this.btnFiltroModelo);
-            this.Controls.Add(this.boton);
+            this.Controls.Add(this.btnFiltroAutor);
+            this.Controls.Add(this.btnFiltroPrecio);
+            this.Controls.Add(this.btnFiltroGenero);
             this.Controls.Add(this.txtBuscar);
             this.Name = "VistaLibrosGerente";
             ((System.ComponentModel.ISupportInitialize)(this.tablaLibros)).EndInit();
@@ -298,11 +302,11 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2TextBox txtBuscar;
-        private Guna.UI2.WinForms.Guna2Button boton;
-        private Guna.UI2.WinForms.Guna2Button btnFiltroModelo;
-        private Guna.UI2.WinForms.Guna2Button btnFiltroMarca;
+        private Guna.UI2.WinForms.Guna2Button btnFiltroGenero;
+        private Guna.UI2.WinForms.Guna2Button btnFiltroPrecio;
+        private Guna.UI2.WinForms.Guna2Button btnFiltroAutor;
         private Guna.UI2.WinForms.Guna2Button btnReiniciar;
-        private Guna.UI2.WinForms.Guna2Button btnFiltroLocalizacion;
+        private Guna.UI2.WinForms.Guna2Button btnFiltroStock;
         private Guna.UI2.WinForms.Guna2DataGridView tablaLibros;
         private Guna.UI2.WinForms.Guna2Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;

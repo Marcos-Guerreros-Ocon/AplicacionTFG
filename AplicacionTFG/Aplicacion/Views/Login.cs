@@ -60,7 +60,7 @@ namespace Presentacion.Views
                 return;
             }
 
-            if (usuario.tipo.Equals("gerente"))
+            if (usuario.tipo.Equals("Gerente"))
             {
                 ProgramaGerente programa= new ProgramaGerente();
                 this.Hide();
@@ -69,7 +69,7 @@ namespace Presentacion.Views
                 return;
             }
 
-            if (usuario.tipo.Equals("vendedor"))
+            if (usuario.tipo.Equals("Vendedor"))
             {
                 ProgramaVendedor vendedor = new ProgramaVendedor();
                 this.correo = correo;

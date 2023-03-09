@@ -31,6 +31,7 @@ namespace Presentacion.Views.VistasGerente
                 return;
             }
             MostrarMensajeInfo("Vendedor borrado con exito");
+            this.Close();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -63,11 +64,17 @@ namespace Presentacion.Views.VistasGerente
 
         private void MostrarMensajeError(string msg)
         {
-            MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.resultado.Caption = "Error";
+            this.resultado.Text = msg;
+            this.resultado.Show();
         }
         private void MostrarMensajeInfo(string msg)
         {
-            MessageBox.Show(msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.resultado.Caption = "Info";
+            this.resultado.Text = msg;
+            this.resultado.Show();
         }
 
         private bool ComprobarCampos()

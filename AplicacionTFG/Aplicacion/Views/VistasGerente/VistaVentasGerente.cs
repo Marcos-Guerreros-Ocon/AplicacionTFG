@@ -33,5 +33,11 @@ namespace Presentacion.Views.VistasGerente
                 tablaVentas.Rows.Add(libro.isbn,libro.titulo,libro.autor,usuario.nombre,usuario.apellidos,usuario.correo);
             }
         }
+
+        private void btnVistaGrafico_Click(object sender, EventArgs e)
+        {
+            new VistaGraficoVentas().ShowDialog();
+     
+        }
     }
 }

@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tablaVentas = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnVistaGrafico = new Guna.UI2.WinForms.Guna2Button();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,44 +128,50 @@
             this.txtBuscar.Size = new System.Drawing.Size(200, 36);
             this.txtBuscar.TabIndex = 9;
             // 
-            // btnAgregar
+            // btnVistaGrafico
             // 
-            this.btnAgregar.BorderRadius = 10;
-            this.btnAgregar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAgregar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAgregar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAgregar.FillColor = System.Drawing.Color.Coral;
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(740, 622);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(120, 45);
-            this.btnAgregar.TabIndex = 17;
-            this.btnAgregar.Text = "Vista Gráfico";
+            this.btnVistaGrafico.BorderRadius = 10;
+            this.btnVistaGrafico.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVistaGrafico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVistaGrafico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVistaGrafico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVistaGrafico.FillColor = System.Drawing.Color.Coral;
+            this.btnVistaGrafico.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnVistaGrafico.ForeColor = System.Drawing.Color.White;
+            this.btnVistaGrafico.Location = new System.Drawing.Point(740, 622);
+            this.btnVistaGrafico.Name = "btnVistaGrafico";
+            this.btnVistaGrafico.Size = new System.Drawing.Size(120, 45);
+            this.btnVistaGrafico.TabIndex = 17;
+            this.btnVistaGrafico.Text = "Vista Gráfico";
+            this.btnVistaGrafico.Click += new System.EventHandler(this.btnVistaGrafico_Click);
             // 
             // ISBN
             // 
-            this.ISBN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ISBN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ISBN.HeaderText = "ISBN";
             this.ISBN.Name = "ISBN";
             this.ISBN.ReadOnly = true;
-            this.ISBN.Width = 193;
+            this.ISBN.Width = 70;
             // 
             // Titulo
             // 
+            this.Titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Titulo.FillWeight = 396.9072F;
             this.Titulo.HeaderText = "Titulo";
             this.Titulo.Name = "Titulo";
             this.Titulo.ReadOnly = true;
+            this.Titulo.Width = 78;
             // 
             // Autor
             // 
+            this.Autor.FillWeight = 25.77319F;
             this.Autor.HeaderText = "Autor";
             this.Autor.Name = "Autor";
             this.Autor.ReadOnly = true;
             // 
             // Nombre
             // 
+            this.Nombre.FillWeight = 25.77319F;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
@@ -174,12 +180,14 @@
             // 
             // Apellidos
             // 
+            this.Apellidos.FillWeight = 25.77319F;
             this.Apellidos.HeaderText = "Apellidos";
             this.Apellidos.Name = "Apellidos";
             this.Apellidos.ReadOnly = true;
             // 
             // Correo
             // 
+            this.Correo.FillWeight = 25.77319F;
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
@@ -189,7 +197,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 691);
-            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnVistaGrafico);
             this.Controls.Add(this.tablaVentas);
             this.Controls.Add(this.txtBuscar);
             this.Name = "VistaVentasGerente";
@@ -202,7 +210,7 @@
         #endregion
         private Guna.UI2.WinForms.Guna2TextBox txtBuscar;
         private Guna.UI2.WinForms.Guna2DataGridView tablaVentas;
-        private Guna.UI2.WinForms.Guna2Button btnAgregar;
+        private Guna.UI2.WinForms.Guna2Button btnVistaGrafico;
         private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;

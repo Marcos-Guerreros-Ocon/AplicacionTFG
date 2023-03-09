@@ -3,6 +3,7 @@ using Datos.Models;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Presentacion.Views.VistasGerente
@@ -70,6 +71,36 @@ namespace Presentacion.Views.VistasGerente
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
             RecargarTabla(null);
+        }
+
+        private void btnFiltroGenero_Click(object sender, EventArgs e)
+        {
+            Filtrar filtro = new Filtrar();
+            FiltroGeneros popup = new FiltroGeneros(filtro);
+            popup.ShowDialog();
+
+            List<string> generosSelectionados = filtro.listaParaFiltrar;
+            
+            if (generosSelectionados.Count() > 0)
+            {
+                List<Libro> listaLibrosFiltrados = new LibrosController().ObtenerLibrosPorGenero(generosSelectionados);
+                RecargarTabla(listaLibrosFiltrados);
+            }
+        }
+
+        private void btnFiltroAutor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFiltroPrecio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFiltroStock_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

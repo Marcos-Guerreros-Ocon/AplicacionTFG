@@ -42,7 +42,7 @@ namespace Datos.Controllers
 
               foreach (Usuario usuario in lista)
             {
-                if (!usuario.tipo.Equals("gerente"))
+                if (!usuario.tipo.Equals("Gerente"))
                 {
                     vendedores.Add(usuario);
                 }
