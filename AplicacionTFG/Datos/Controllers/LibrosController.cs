@@ -127,9 +127,11 @@ namespace Datos.Controllers
         {
             List<Libro>libros = ObtenerLibros();
             List<Libro> lista = new List<Libro>();
+            Genero genero;
             foreach (Libro libro in libros)
             {
-                if (libro.isbn.Contains(busqueda)||libro.titulo.Contains(busqueda) || libro.autor.Contains(busqueda))
+                genero = new GeneroController().ObtenerGenero(libro.idGenero);
+                if (libro.isbn.Contains(busqueda)||libro.titulo.Contains(busqueda) || libro.autor.Contains(busqueda)|| genero.nombre.Contains(busqueda))
                 {
                     lista.Add(libro);
                 }
@@ -188,6 +190,24 @@ namespace Datos.Controllers
             }
 
             return listaLibros;
+        }
+
+        public List<string> ObtenerAutores()
+        {
+            
+            List<string> autores = new List<string>();
+            List<Libro> lista = ObtenerLibros();            
+            foreach (Libro libro in lista)
+            {
+                
+                if (!autores.Contains(libro.autor))
+                {
+                    autores.Add(libro.autor);
+                }
+               
+            }
+
+            return autores;
         }
 
         /*

@@ -50,6 +50,7 @@ namespace Presentacion.Views.VistasVendedor
             this.fotoLogo = new System.Windows.Forms.PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelFormulario = new System.Windows.Forms.Panel();
+            this.btnCuenta = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelVentas.SuspendLayout();
             this.panelLibros.SuspendLayout();
@@ -61,6 +62,7 @@ namespace Presentacion.Views.VistasVendedor
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.Coral;
+            this.panelMenu.Controls.Add(this.btnCuenta);
             this.panelMenu.Controls.Add(this.btnSalir);
             this.panelMenu.Controls.Add(this.panelVentas);
             this.panelMenu.Controls.Add(this.btnVentas);
@@ -301,6 +303,20 @@ namespace Presentacion.Views.VistasVendedor
             this.panelFormulario.Size = new System.Drawing.Size(950, 844);
             this.panelFormulario.TabIndex = 1;
             // 
+            // btnCuenta
+            // 
+            this.btnCuenta.BackColor = System.Drawing.Color.Coral;
+            this.btnCuenta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCuenta.FlatAppearance.BorderSize = 0;
+            this.btnCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCuenta.ForeColor = System.Drawing.Color.White;
+            this.btnCuenta.Location = new System.Drawing.Point(0, 628);
+            this.btnCuenta.Name = "btnCuenta";
+            this.btnCuenta.Size = new System.Drawing.Size(250, 50);
+            this.btnCuenta.TabIndex = 8;
+            this.btnCuenta.Text = "Mi Cuenta";
+            this.btnCuenta.UseVisualStyleBackColor = false;
+            // 
             // ProgramaVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,5 +361,6 @@ namespace Presentacion.Views.VistasVendedor
         private System.Windows.Forms.Panel panelMenu;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Panel panelFormulario;
+        private System.Windows.Forms.Button btnCuenta;
     }
 }

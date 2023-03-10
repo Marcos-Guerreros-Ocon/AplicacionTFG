@@ -90,7 +90,17 @@ namespace Presentacion.Views.VistasGerente
 
         private void btnFiltroAutor_Click(object sender, EventArgs e)
         {
+            Filtrar filtro = new Filtrar();
+            FiltroAutor popup = new FiltroAutor(filtro);
+            popup.ShowDialog();
 
+            List<string> autoresSeleccionados = filtro.listaParaFiltrar;
+
+            if (autoresSeleccionados.Count() > 0)
+            {
+                List<Libro> listaLibrosFiltrados = new LibrosController().ObtenerLibrosPorAutor(autoresSeleccionados);
+                RecargarTabla(listaLibrosFiltrados);
+            }
         }
 
         private void btnFiltroPrecio_Click(object sender, EventArgs e)

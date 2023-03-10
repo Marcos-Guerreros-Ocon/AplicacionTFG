@@ -95,13 +95,69 @@ namespace Presentacion.Views.VistasGerente
         private void btnVentas_Click(object sender, EventArgs e)
         {
             openChildForm(new VistaVentasGerente());
+            labelTitulo.Text = "Ventas";
             if (!panelVentas.Visible)
             {
                 MostrarSubCategorias();
                 showSubMenu(panelVentas);
             }
         }
+        private void btnVentas1_Click(object sender, EventArgs e)
+        {
+            List<string> genero = new List<string>
+            {
+                btnVentas1.Text
+            };
+            Genero aux = new GeneroController().ObtenerGenero(btnVentas1.Text);
+            List<Venta> ventas = new VentaController().ObtenerVentasGenero(aux.idGenero);
+            VistaVentasGerente vistaVentasGerente = new VistaVentasGerente();
+            vistaVentasGerente.CargarTabla(ventas);
+            labelTitulo.Text = "Ventas";
+            openChildForm(vistaVentasGerente);
 
+        }
+
+        private void btnVentas2_Click(object sender, EventArgs e)
+        {
+            List<string> genero = new List<string>
+            {
+                btnVentas2.Text
+            };
+            Genero aux = new GeneroController().ObtenerGenero(btnVentas2.Text);
+            List<Venta> ventas = new VentaController().ObtenerVentasGenero(aux.idGenero);
+            VistaVentasGerente vistaVentasGerente = new VistaVentasGerente();
+            vistaVentasGerente.CargarTabla(ventas);
+            labelTitulo.Text = "Ventas";
+            openChildForm(vistaVentasGerente);
+        }
+
+        private void btnVentas3_Click(object sender, EventArgs e)
+        {
+            List<string> genero = new List<string>
+            {
+                btnVentas3.Text
+            };
+            Genero aux = new GeneroController().ObtenerGenero(btnVentas3.Text);
+            List<Venta> ventas = new VentaController().ObtenerVentasGenero(aux.idGenero);
+            VistaVentasGerente vistaVentasGerente = new VistaVentasGerente();
+            vistaVentasGerente.CargarTabla(ventas);
+            labelTitulo.Text = "Ventas";
+            openChildForm(vistaVentasGerente);
+        }
+
+        private void btnVentas4_Click(object sender, EventArgs e)
+        {
+            List<string> genero = new List<string>
+            {
+                btnVentas4.Text
+            };
+            Genero aux = new GeneroController().ObtenerGenero(btnVentas4.Text);
+            List<Venta> ventas = new VentaController().ObtenerVentasGenero(aux.idGenero);
+            VistaVentasGerente vistaVentasGerente = new VistaVentasGerente();
+            vistaVentasGerente.CargarTabla(ventas);
+            labelTitulo.Text = "Ventas";
+            openChildForm(vistaVentasGerente);
+        }
         private void btnVendedores_Click(object sender, EventArgs e)
         {
             labelTitulo.Text = "Vendedores";
@@ -252,7 +308,6 @@ namespace Presentacion.Views.VistasGerente
 
             }
         }
-
 
     }
 }

@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tablaVentas = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnVistaGrafico = new Guna.UI2.WinForms.Guna2Button();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnVistaGrafico = new Guna.UI2.WinForms.Guna2Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.tablaVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,17 +50,17 @@
             this.tablaVentas.AllowUserToDeleteRows = false;
             this.tablaVentas.AllowUserToResizeColumns = false;
             this.tablaVentas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tablaVentas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tablaVentas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.tablaVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ISBN,
             this.Titulo,
@@ -67,14 +68,14 @@
             this.Nombre,
             this.Apellidos,
             this.Correo});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaVentas.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaVentas.DefaultCellStyle = dataGridViewCellStyle24;
             this.tablaVentas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(209)))), ((int)(((byte)(177)))));
             this.tablaVentas.Location = new System.Drawing.Point(90, 228);
             this.tablaVentas.MultiSelect = false;
@@ -106,44 +107,6 @@
             this.tablaVentas.ThemeStyle.RowsStyle.Height = 22;
             this.tablaVentas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
             this.tablaVentas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BorderRadius = 10;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.DefaultText = "";
-            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.IconRight = global::Presentacion.Properties.Resources.search;
-            this.txtBuscar.Location = new System.Drawing.Point(660, 157);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PasswordChar = '\0';
-            this.txtBuscar.PlaceholderText = "";
-            this.txtBuscar.SelectedText = "";
-            this.txtBuscar.Size = new System.Drawing.Size(200, 36);
-            this.txtBuscar.TabIndex = 9;
-            // 
-            // btnVistaGrafico
-            // 
-            this.btnVistaGrafico.BorderRadius = 10;
-            this.btnVistaGrafico.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnVistaGrafico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnVistaGrafico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnVistaGrafico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnVistaGrafico.FillColor = System.Drawing.Color.Coral;
-            this.btnVistaGrafico.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnVistaGrafico.ForeColor = System.Drawing.Color.White;
-            this.btnVistaGrafico.Location = new System.Drawing.Point(740, 622);
-            this.btnVistaGrafico.Name = "btnVistaGrafico";
-            this.btnVistaGrafico.Size = new System.Drawing.Size(120, 45);
-            this.btnVistaGrafico.TabIndex = 17;
-            this.btnVistaGrafico.Text = "Vista Gráfico";
-            this.btnVistaGrafico.Click += new System.EventHandler(this.btnVistaGrafico_Click);
             // 
             // ISBN
             // 
@@ -192,11 +155,60 @@
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BorderRadius = 10;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.DefaultText = "";
+            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.IconRight = global::Presentacion.Properties.Resources.search;
+            this.txtBuscar.Location = new System.Drawing.Point(660, 157);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PasswordChar = '\0';
+            this.txtBuscar.PlaceholderText = "";
+            this.txtBuscar.SelectedText = "";
+            this.txtBuscar.Size = new System.Drawing.Size(200, 36);
+            this.txtBuscar.TabIndex = 9;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // btnVistaGrafico
+            // 
+            this.btnVistaGrafico.BorderRadius = 10;
+            this.btnVistaGrafico.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVistaGrafico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVistaGrafico.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVistaGrafico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVistaGrafico.FillColor = System.Drawing.Color.Coral;
+            this.btnVistaGrafico.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnVistaGrafico.ForeColor = System.Drawing.Color.White;
+            this.btnVistaGrafico.Location = new System.Drawing.Point(740, 622);
+            this.btnVistaGrafico.Name = "btnVistaGrafico";
+            this.btnVistaGrafico.Size = new System.Drawing.Size(120, 45);
+            this.btnVistaGrafico.TabIndex = 17;
+            this.btnVistaGrafico.Text = "Vista Gráfico";
+            this.btnVistaGrafico.Click += new System.EventHandler(this.btnVistaGrafico_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(28, 157);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(895, 445);
+            this.flowLayoutPanel1.TabIndex = 19;
+            this.flowLayoutPanel1.Visible = false;
+            // 
             // VistaVentasGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 691);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnVistaGrafico);
             this.Controls.Add(this.tablaVentas);
             this.Controls.Add(this.txtBuscar);
@@ -217,5 +229,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

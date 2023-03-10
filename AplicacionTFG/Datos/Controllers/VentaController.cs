@@ -62,7 +62,22 @@ namespace Datos.Controllers
             }
             return lista;
         }
+        public List<Venta> ObtenerVentasGenero(int idGenero)
+        {
+            List<Venta> ventas = ObtenerVentas();
+            List<Venta> lista = new List<Venta>();
+            Libro libro;
+            foreach (Venta venta in ventas)
+            {
+                libro = new LibrosController().ObtenerLibro(venta.isbn);
+                if (libro.idGenero == idGenero)
+                {
+                    lista.Add(venta);
+                }
 
+            }
+            return lista;
+        }
         /// <summary>
         /// Método encargo de obtener una lista de las ventas realizadas del libro con el isbn indicado.
         /// </summary>
@@ -100,6 +115,28 @@ namespace Datos.Controllers
             {
                 return false;
             }
+        }
+
+        public List<Venta> ObtenerVentaPorBusqueda(string busqueda)
+        {
+            List<Venta> ventas = ObtenerVentas();
+            List<Venta> lista = new List<Venta>();
+            Libro libro;
+            Usuario vendedor;
+            foreach (Venta venta in ventas)
+            {
+                libro = new LibrosController().ObtenerLibro(venta.isbn);
+                vendedor = new UsuarioController().ObtenerUsuario(venta.idUsuario);
+
+                if (venta.isbn.Contains(busqueda) || libro.titulo.Contains(busqueda) ||
+                    libro.autor.Contains(busqueda) || vendedor.nombre.Contains(busqueda) ||
+                    vendedor.apellidos.Contains(busqueda) || vendedor.correo.Contains(busqueda))
+                {
+                    lista.Add(venta);
+                }
+            }
+
+            return lista;
         }
     }
 }

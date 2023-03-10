@@ -14,14 +14,11 @@ namespace Presentacion.Views.VistasGerente
 {
     public partial class VistaGraficoVentas : Form
     {
-        private String estiloGrafico;
+
         public VistaGraficoVentas()
         {
             InitializeComponent();
-            cargarGrafico();
-            estiloGrafico = "Pie";
-
-         
+            cargarGrafico();         
         }
 
         private void cargarGrafico()
@@ -39,33 +36,20 @@ namespace Presentacion.Views.VistasGerente
                 graficoVendedores.BackColor = Color.White;
                 graficoVendedores.Series["Ventas"].IsValueShownAsLabel= true;
                 graficoVendedores.Series["Ventas"].Points.AddXY(vendedor.nombre + " " + vendedor.apellidos, ventas.Count());
-
             }
-         
-            
-        }
 
-        private void botonRedondeadoPropio1_Click(object sender, EventArgs e)
-        {
-            if (estiloGrafico.Equals("Pie"))
-            {
-                graficoVendedores.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-                estiloGrafico = "Columna";
-                btnCambiarGrafico.Text = "Gráfico Pie";
-
-            }
-            else
-            {
-                graficoVendedores.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-                estiloGrafico = "Pie";
-                btnCambiarGrafico.Text = "Gráfico Columna";
+            List<Genero> generos = new GeneroController().ObtenerGeneros();
+            foreach (Genero genero in generos) {
+                ventas = new VentaController().ObtenerVentasGenero(genero.idGenero);
+                graficoGeneros.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                graficoGeneros.ChartAreas[0].AxisX.MinorGrid.Enabled = false;
+                graficoGeneros.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+                graficoGeneros.ChartAreas[0].AxisY.MinorGrid.Enabled = false;
+                graficoGeneros.BackColor = Color.White;
+                graficoGeneros.Series["Ventas"].IsValueShownAsLabel = true;
+                graficoGeneros.Series["Ventas"].Points.AddXY(genero.nombre, ventas.Count());
             }
             
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

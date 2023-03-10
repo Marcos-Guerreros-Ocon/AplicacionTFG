@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgramaGerente));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelGeneros = new System.Windows.Forms.Panel();
             this.btnGeneros = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelVendedores = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@
             this.panelFormulario = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelTitulo = new Presentacion.Controllers.LabelPropio();
-            this.panelGeneros = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelVendedores.SuspendLayout();
             this.panelVentas.SuspendLayout();
@@ -84,6 +84,13 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(250, 968);
             this.panelMenu.TabIndex = 0;
+            // 
+            // panelGeneros
+            // 
+            this.panelGeneros.Location = new System.Drawing.Point(0, 773);
+            this.panelGeneros.Name = "panelGeneros";
+            this.panelGeneros.Size = new System.Drawing.Size(247, 12);
+            this.panelGeneros.TabIndex = 9;
             // 
             // btnGeneros
             // 
@@ -181,6 +188,7 @@
             this.btnVentas4.TabIndex = 3;
             this.btnVentas4.Text = "Genero";
             this.btnVentas4.UseVisualStyleBackColor = false;
+            this.btnVentas4.Click += new System.EventHandler(this.btnVentas4_Click);
             // 
             // btnVentas3
             // 
@@ -195,6 +203,7 @@
             this.btnVentas3.TabIndex = 2;
             this.btnVentas3.Text = "Genero";
             this.btnVentas3.UseVisualStyleBackColor = false;
+            this.btnVentas3.Click += new System.EventHandler(this.btnVentas3_Click);
             // 
             // btnVentas2
             // 
@@ -209,6 +218,7 @@
             this.btnVentas2.TabIndex = 1;
             this.btnVentas2.Text = "Genero";
             this.btnVentas2.UseVisualStyleBackColor = false;
+            this.btnVentas2.Click += new System.EventHandler(this.btnVentas2_Click);
             // 
             // btnVentas1
             // 
@@ -223,6 +233,7 @@
             this.btnVentas1.TabIndex = 0;
             this.btnVentas1.Text = "Genero";
             this.btnVentas1.UseVisualStyleBackColor = false;
+            this.btnVentas1.Click += new System.EventHandler(this.btnVentas1_Click);
             // 
             // btnVentas
             // 
@@ -386,13 +397,6 @@
             this.labelTitulo.Size = new System.Drawing.Size(93, 37);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Titulo";
-            // 
-            // panelGeneros
-            // 
-            this.panelGeneros.Location = new System.Drawing.Point(0, 773);
-            this.panelGeneros.Name = "panelGeneros";
-            this.panelGeneros.Size = new System.Drawing.Size(247, 12);
-            this.panelGeneros.TabIndex = 9;
             // 
             // ProgramaGerente
             // 

@@ -1,6 +1,8 @@
-﻿namespace Presentacion.Views
+﻿using System.Windows.Forms;
+
+namespace Presentacion.Views
 {
-    partial class FiltroGeneros
+    partial class FiltroAutor :Form
     {
         /// <summary>
         /// Required designer variable.
@@ -33,23 +35,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tablaFiltroGeneros = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Género = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablaFiltroAutores = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Filtrar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnCerrar = new Presentacion.Controllers.BotonPropio(this.components);
             this.btnFiltrar = new Presentacion.Controllers.BotonPropio(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaFiltroGeneros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaFiltroAutores)).BeginInit();
             this.SuspendLayout();
             // 
-            // tablaFiltroGeneros
+            // tablaFiltroAutores
             // 
-            this.tablaFiltroGeneros.AllowUserToAddRows = false;
-            this.tablaFiltroGeneros.AllowUserToDeleteRows = false;
-            this.tablaFiltroGeneros.AllowUserToResizeColumns = false;
-            this.tablaFiltroGeneros.AllowUserToResizeRows = false;
+            this.tablaFiltroAutores.AllowUserToAddRows = false;
+            this.tablaFiltroAutores.AllowUserToDeleteRows = false;
+            this.tablaFiltroAutores.AllowUserToResizeColumns = false;
+            this.tablaFiltroAutores.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
-            this.tablaFiltroGeneros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaFiltroAutores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -57,11 +59,11 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaFiltroGeneros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tablaFiltroGeneros.ColumnHeadersHeight = 15;
-            this.tablaFiltroGeneros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tablaFiltroGeneros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Género,
+            this.tablaFiltroAutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tablaFiltroAutores.ColumnHeadersHeight = 15;
+            this.tablaFiltroAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tablaFiltroAutores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Autor,
             this.Filtrar});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
@@ -70,43 +72,43 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaFiltroGeneros.DefaultCellStyle = dataGridViewCellStyle4;
-            this.tablaFiltroGeneros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(209)))), ((int)(((byte)(177)))));
-            this.tablaFiltroGeneros.Location = new System.Drawing.Point(102, 61);
-            this.tablaFiltroGeneros.Name = "tablaFiltroGeneros";
-            this.tablaFiltroGeneros.RowHeadersVisible = false;
-            this.tablaFiltroGeneros.Size = new System.Drawing.Size(304, 302);
-            this.tablaFiltroGeneros.TabIndex = 3;
-            this.tablaFiltroGeneros.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Carrot;
-            this.tablaFiltroGeneros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
-            this.tablaFiltroGeneros.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tablaFiltroGeneros.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tablaFiltroGeneros.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tablaFiltroGeneros.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tablaFiltroGeneros.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.tablaFiltroGeneros.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(209)))), ((int)(((byte)(177)))));
-            this.tablaFiltroGeneros.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.tablaFiltroGeneros.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tablaFiltroGeneros.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tablaFiltroGeneros.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tablaFiltroGeneros.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tablaFiltroGeneros.ThemeStyle.HeaderStyle.Height = 15;
-            this.tablaFiltroGeneros.ThemeStyle.ReadOnly = false;
-            this.tablaFiltroGeneros.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
-            this.tablaFiltroGeneros.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tablaFiltroGeneros.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tablaFiltroGeneros.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.tablaFiltroGeneros.ThemeStyle.RowsStyle.Height = 22;
-            this.tablaFiltroGeneros.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
-            this.tablaFiltroGeneros.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tablaFiltroAutores.DefaultCellStyle = dataGridViewCellStyle4;
+            this.tablaFiltroAutores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(209)))), ((int)(((byte)(177)))));
+            this.tablaFiltroAutores.Location = new System.Drawing.Point(102, 61);
+            this.tablaFiltroAutores.Name = "tablaFiltroAutores";
+            this.tablaFiltroAutores.RowHeadersVisible = false;
+            this.tablaFiltroAutores.Size = new System.Drawing.Size(304, 302);
+            this.tablaFiltroAutores.TabIndex = 3;
+            this.tablaFiltroAutores.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Carrot;
+            this.tablaFiltroAutores.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
+            this.tablaFiltroAutores.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.tablaFiltroAutores.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.tablaFiltroAutores.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.tablaFiltroAutores.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.tablaFiltroAutores.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.tablaFiltroAutores.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(209)))), ((int)(((byte)(177)))));
+            this.tablaFiltroAutores.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.tablaFiltroAutores.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tablaFiltroAutores.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tablaFiltroAutores.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tablaFiltroAutores.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tablaFiltroAutores.ThemeStyle.HeaderStyle.Height = 15;
+            this.tablaFiltroAutores.ThemeStyle.ReadOnly = false;
+            this.tablaFiltroAutores.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
+            this.tablaFiltroAutores.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tablaFiltroAutores.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tablaFiltroAutores.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.tablaFiltroAutores.ThemeStyle.RowsStyle.Height = 22;
+            this.tablaFiltroAutores.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
+            this.tablaFiltroAutores.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // Género
+            // Autor
             // 
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.Género.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Género.HeaderText = "Género";
-            this.Género.Name = "Género";
-            this.Género.ReadOnly = true;
+            this.Autor.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Autor.HeaderText = "Autor";
+            this.Autor.Name = "Autor";
+            this.Autor.ReadOnly = true;
             // 
             // Filtrar
             // 
@@ -131,7 +133,6 @@
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextColor = System.Drawing.Color.White;
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnFiltrar
             // 
@@ -159,33 +160,32 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // FiltroGeneros
+            // FiltroAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 500);
-            this.ControlBox = false;
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.tablaFiltroGeneros);
+            this.Controls.Add(this.tablaFiltroAutores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(500, 500);
             this.MinimumSize = new System.Drawing.Size(500, 500);
-            this.Name = "FiltroGeneros";
+            this.Name = "FiltroAutor";
             this.ShowIcon = false;
             this.Text = "FiltroGeneros";
-            ((System.ComponentModel.ISupportInitialize)(this.tablaFiltroGeneros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaFiltroAutores)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2DataGridView tablaFiltroGeneros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Género;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Filtrar;
+        private Guna.UI2.WinForms.Guna2DataGridView tablaFiltroAutores;
         private Controllers.BotonPropio btnCerrar;
         private Controllers.BotonPropio btnFiltrar;
+        private DataGridViewTextBoxColumn Autor;
+        private DataGridViewCheckBoxColumn Filtrar;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

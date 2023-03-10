@@ -93,5 +93,42 @@ namespace Presentacion.Views.VistasVendedor
             LimpiarTabla();
             CargarTabla(null);
         }
+
+        private void btnFiltroGenero_Click(object sender, EventArgs e)
+        {
+            Filtrar filtro = new Filtrar();
+            FiltroGeneros popup = new FiltroGeneros(filtro);
+            popup.ShowDialog();
+
+            List<string> autoresSeleccionados = filtro.listaParaFiltrar;
+
+            if (autoresSeleccionados.Count() > 0)
+            {
+                List<Libro> listaLibrosFiltrados = new LibrosController().ObtenerLibrosPorGenero(autoresSeleccionados);
+                LimpiarTabla();
+                CargarTabla(listaLibrosFiltrados);
+            }
+        }
+
+        private void btnFiltroAutor_Click(object sender, EventArgs e)
+        {
+            Filtrar filtro = new Filtrar();
+            FiltroAutor popup = new FiltroAutor(filtro);
+            popup.ShowDialog();
+
+            List<string> autoresSeleccionados = filtro.listaParaFiltrar;
+
+            if (autoresSeleccionados.Count() > 0)
+            {
+                List<Libro> listaLibrosFiltrados = new LibrosController().ObtenerLibrosPorAutor(autoresSeleccionados);
+                LimpiarTabla();
+                CargarTabla(listaLibrosFiltrados);
+            }
+        }
+
+        private void tablaLibros_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

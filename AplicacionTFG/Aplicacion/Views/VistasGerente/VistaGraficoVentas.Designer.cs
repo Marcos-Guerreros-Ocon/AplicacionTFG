@@ -28,100 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.graficoVendedores = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.btnVolver = new Presentacion.Controllers.BotonRedondeadoPropio();
-            this.btnCambiarGrafico = new Presentacion.Controllers.BotonRedondeadoPropio();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.graficoGeneros = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.graficoVendedores)).BeginInit();
+            this.guna2ShadowPanel1.SuspendLayout();
+            this.guna2ShadowPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoGeneros)).BeginInit();
             this.SuspendLayout();
             // 
             // graficoVendedores
             // 
-            chartArea2.Name = "ChartArea1";
-            this.graficoVendedores.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.graficoVendedores.Legends.Add(legend2);
-            this.graficoVendedores.Location = new System.Drawing.Point(-1, 0);
+            chartArea5.Name = "ChartArea1";
+            this.graficoVendedores.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.graficoVendedores.Legends.Add(legend5);
+            this.graficoVendedores.Location = new System.Drawing.Point(17, 19);
             this.graficoVendedores.Name = "graficoVendedores";
             this.graficoVendedores.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Ventas";
-            series2.YValuesPerPoint = 4;
-            this.graficoVendedores.Series.Add(series2);
-            this.graficoVendedores.Size = new System.Drawing.Size(535, 516);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Ventas";
+            series5.YValuesPerPoint = 4;
+            this.graficoVendedores.Series.Add(series5);
+            this.graficoVendedores.Size = new System.Drawing.Size(342, 279);
             this.graficoVendedores.TabIndex = 0;
             this.graficoVendedores.Text = "chart1";
             // 
-            // guna2BorderlessForm1
+            // guna2ShadowPanel1
             // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.graficoVendedores);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(26, 35);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(381, 310);
+            this.guna2ShadowPanel1.TabIndex = 3;
             // 
-            // btnVolver
+            // guna2ShadowPanel2
             // 
-            this.btnVolver.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnVolver.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnVolver.BorderColor = System.Drawing.Color.Coral;
-            this.btnVolver.BorderRadius = 0;
-            this.btnVolver.BorderSize = 0;
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(551, 428);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(150, 40);
-            this.btnVolver.TabIndex = 2;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.TextColor = System.Drawing.Color.White;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel2.Controls.Add(this.graficoGeneros);
+            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel2.Location = new System.Drawing.Point(462, 35);
+            this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanel2.Size = new System.Drawing.Size(393, 310);
+            this.guna2ShadowPanel2.TabIndex = 4;
             // 
-            // btnCambiarGrafico
+            // graficoGeneros
             // 
-            this.btnCambiarGrafico.BackColor = System.Drawing.Color.Coral;
-            this.btnCambiarGrafico.BackgroundColor = System.Drawing.Color.Coral;
-            this.btnCambiarGrafico.BorderColor = System.Drawing.Color.Coral;
-            this.btnCambiarGrafico.BorderRadius = 0;
-            this.btnCambiarGrafico.BorderSize = 0;
-            this.btnCambiarGrafico.FlatAppearance.BorderSize = 0;
-            this.btnCambiarGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarGrafico.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCambiarGrafico.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarGrafico.Location = new System.Drawing.Point(551, 367);
-            this.btnCambiarGrafico.Name = "btnCambiarGrafico";
-            this.btnCambiarGrafico.Size = new System.Drawing.Size(150, 40);
-            this.btnCambiarGrafico.TabIndex = 1;
-            this.btnCambiarGrafico.Text = "Gráfico Columna";
-            this.btnCambiarGrafico.TextColor = System.Drawing.Color.White;
-            this.btnCambiarGrafico.UseVisualStyleBackColor = false;
-            this.btnCambiarGrafico.Click += new System.EventHandler(this.botonRedondeadoPropio1_Click);
+            chartArea6.Name = "ChartArea1";
+            this.graficoGeneros.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.graficoGeneros.Legends.Add(legend6);
+            this.graficoGeneros.Location = new System.Drawing.Point(17, 19);
+            this.graficoGeneros.Name = "graficoGeneros";
+            this.graficoGeneros.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "Ventas";
+            series6.YValuesPerPoint = 4;
+            this.graficoGeneros.Series.Add(series6);
+            this.graficoGeneros.Size = new System.Drawing.Size(360, 279);
+            this.graficoGeneros.TabIndex = 0;
+            this.graficoGeneros.Text = "chart1";
             // 
             // VistaGraficoVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(730, 500);
-            this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnCambiarGrafico);
-            this.Controls.Add(this.graficoVendedores);
+            this.ClientSize = new System.Drawing.Size(895, 400);
+            this.Controls.Add(this.guna2ShadowPanel2);
+            this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(730, 500);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(730, 500);
             this.Name = "VistaGraficoVentas";
             this.Text = "VistaGraficoVentas";
             ((System.ComponentModel.ISupportInitialize)(this.graficoVendedores)).EndInit();
+            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.graficoGeneros)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -129,9 +127,8 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoVendedores;
-        private Controllers.BotonRedondeadoPropio btnCambiarGrafico;
-        private Controllers.BotonRedondeadoPropio btnVolver;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graficoGeneros;
     }
 }
