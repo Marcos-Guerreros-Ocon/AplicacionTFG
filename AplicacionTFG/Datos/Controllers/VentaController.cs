@@ -117,7 +117,12 @@ namespace Datos.Controllers
             }
         }
 
-        public List<Venta> ObtenerVentaPorBusqueda(string busqueda)
+        /// <summary>
+        /// Método encargado de obtener un listado de ventas que contenga la busqueda indicada. 
+        /// </summary>
+        /// <param name="busqueda">Busqueda por la que queramos que compruebes los campos de la venta.</param>
+        /// <returns>Devuelve una lista de ventas que contengan la busqueda indicada.</returns>
+        public List<Venta> ObtenerVentaPorBusquedaAdministrador(string busqueda)
         {
             List<Venta> ventas = ObtenerVentas();
             List<Venta> lista = new List<Venta>();
@@ -131,6 +136,34 @@ namespace Datos.Controllers
                 if (venta.isbn.Contains(busqueda) || libro.titulo.Contains(busqueda) ||
                     libro.autor.Contains(busqueda) || vendedor.nombre.Contains(busqueda) ||
                     vendedor.apellidos.Contains(busqueda) || vendedor.correo.Contains(busqueda))
+                {
+                    lista.Add(venta);
+                }
+            }
+
+            return lista;
+        }
+
+        /// <summary>
+        /// Método encargado de obtener un listado de ventas que contenga la busqueda indicada. 
+        /// </summary>
+        /// <param name="busqueda">Busqueda por la que queramos que compruebes los campos de la venta.</param>
+        /// <returns>Devuelve una lista de ventas que contengan la busqueda indicada.</returns>
+        public List<Venta> ObtenerVentaPorBusquedaVendedor(string busqueda)
+        {
+            List<Venta> ventas = ObtenerVentas();
+            List<Venta> lista = new List<Venta>();
+            Libro libro;
+            Genero genero;
+            Usuario vendedor;
+            foreach (Venta venta in ventas)
+            {
+                libro = new LibrosController().ObtenerLibro(venta.isbn);
+                genero = new GeneroController().ObtenerGenero(libro.idGenero);
+                vendedor = new UsuarioController().ObtenerUsuario(venta.idUsuario);
+
+                if (venta.isbn.Contains(busqueda) || libro.titulo.Contains(busqueda) ||
+                    libro.autor.Contains(busqueda) ||genero.nombre.Contains(busqueda))
                 {
                     lista.Add(venta);
                 }

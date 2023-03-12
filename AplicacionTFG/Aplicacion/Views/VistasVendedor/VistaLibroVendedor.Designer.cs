@@ -41,11 +41,11 @@
             this.labelGenero = new Presentacion.Controllers.LabelPropio();
             this.txtAutor = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTitulo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbGenero = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnVender = new Presentacion.Controllers.BotonPropio(this.components);
             this.btnVolver = new Presentacion.Controllers.BotonPropio(this.components);
             this.resultado = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
@@ -53,6 +53,7 @@
             // 
             // panelFormulario
             // 
+            this.panelFormulario.Controls.Add(this.guna2TextBox1);
             this.panelFormulario.Controls.Add(this.txtISBN);
             this.panelFormulario.Controls.Add(this.labelStock);
             this.panelFormulario.Controls.Add(this.numStock);
@@ -64,7 +65,6 @@
             this.panelFormulario.Controls.Add(this.labelGenero);
             this.panelFormulario.Controls.Add(this.txtAutor);
             this.panelFormulario.Controls.Add(this.txtTitulo);
-            this.panelFormulario.Controls.Add(this.cbGenero);
             this.panelFormulario.Location = new System.Drawing.Point(224, 61);
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(356, 293);
@@ -225,21 +225,6 @@
             this.txtTitulo.Size = new System.Drawing.Size(200, 36);
             this.txtTitulo.TabIndex = 2;
             // 
-            // cbGenero
-            // 
-            this.cbGenero.BackColor = System.Drawing.Color.Transparent;
-            this.cbGenero.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGenero.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGenero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGenero.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbGenero.ItemHeight = 30;
-            this.cbGenero.Location = new System.Drawing.Point(148, 67);
-            this.cbGenero.Name = "cbGenero";
-            this.cbGenero.Size = new System.Drawing.Size(200, 36);
-            this.cbGenero.TabIndex = 1;
-            // 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
@@ -293,6 +278,26 @@
             this.resultado.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             this.resultado.Text = null;
             // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.Enabled = false;
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(148, 67);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
+            this.guna2TextBox1.TabIndex = 16;
+            // 
             // VistaLibroVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,7 +324,6 @@
         private Guna.UI2.WinForms.Guna2NumericUpDown numPrecio;
         private Guna.UI2.WinForms.Guna2TextBox txtAutor;
         private Guna.UI2.WinForms.Guna2TextBox txtTitulo;
-        private Guna.UI2.WinForms.Guna2ComboBox cbGenero;
         private Guna.UI2.WinForms.Guna2NumericUpDown numStock;
         private Controllers.LabelPropio labelTitulo;
         private Controllers.LabelPropio labelGenero;
@@ -332,5 +336,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtISBN;
         private Controllers.BotonPropio btnVender;
         private Guna.UI2.WinForms.Guna2MessageDialog resultado;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
 }

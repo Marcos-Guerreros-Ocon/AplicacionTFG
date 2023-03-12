@@ -71,7 +71,7 @@ namespace Presentacion.Views.VistasGerente
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            List<Venta> ventas = new VentaController().ObtenerVentaPorBusqueda(txtBuscar.Text);
+            List<Venta> ventas = new VentaController().ObtenerVentaPorBusquedaAdministrador(txtBuscar.Text);
 
             CargarTabla(ventas);
 

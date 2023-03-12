@@ -24,7 +24,7 @@ namespace Presentacion.Views.VistasVendedor
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            >
+            
         }
     }
 }
