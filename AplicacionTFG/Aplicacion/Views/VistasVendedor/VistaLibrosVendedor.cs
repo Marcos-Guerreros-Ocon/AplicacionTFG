@@ -61,7 +61,7 @@ namespace Presentacion.Views.VistasVendedor
 
                 if (stock.Equals("0"))
                 {
-                    MessageBox.Show("No hay stock de este libro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MostrarMensajeError("No hay stock de este libro");
                     return;
                 }
 
@@ -75,10 +75,10 @@ namespace Presentacion.Views.VistasVendedor
                 bool exito = new VentaController().InsertarVenta(venta);
                 if (!exito)
                 {
-                    MessageBox.Show("Error al realizar la venta del libro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MostrarMensajeError("Error al realizar la venta del libro");                    
                     return;
                 }
-                MessageBox.Show("Venta realizada con exito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarMensajeInfo("Venta realizada con exito");
                 libro.stock--;            
                 new LibrosController().ModificarLibro(libro);
                 LimpiarTabla();
@@ -129,6 +129,21 @@ namespace Presentacion.Views.VistasVendedor
         private void tablaLibros_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void MostrarMensajeError(string msg)
+        {
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.resultado.Caption = "Error";
+            this.resultado.Text = msg;
+            this.resultado.Show();
+        }
+        private void MostrarMensajeInfo(string msg)
+        {
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.resultado.Caption = "Info";
+            this.resultado.Text = msg;
+            this.resultado.Show();
         }
     }
 }

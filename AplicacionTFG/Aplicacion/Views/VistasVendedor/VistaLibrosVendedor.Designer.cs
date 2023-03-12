@@ -45,6 +45,7 @@
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVender = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.resultado = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.tablaLibros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -262,6 +263,15 @@
             this.txtBuscar.TabIndex = 9;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
+            // resultado
+            // 
+            this.resultado.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.resultado.Caption = null;
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.resultado.Parent = null;
+            this.resultado.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.resultado.Text = null;
+            // 
             // VistaLibrosVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,5 +306,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Localizacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewButtonColumn btnVender;
+        private Guna.UI2.WinForms.Guna2MessageDialog resultado;
     }
 }

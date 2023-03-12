@@ -35,6 +35,7 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             this.imgLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.resultado = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.panel.SuspendLayout();
             this.panelFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -136,6 +137,15 @@
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
             // 
+            // resultado
+            // 
+            this.resultado.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.resultado.Caption = null;
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.resultado.Parent = null;
+            this.resultado.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.resultado.Text = null;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,5 +173,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtCorreo;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgLogo;
+        private Guna.UI2.WinForms.Guna2MessageDialog resultado;
     }
 }

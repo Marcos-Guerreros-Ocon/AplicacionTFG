@@ -1,6 +1,6 @@
-﻿namespace Presentacion.Views.VistasGerente
+﻿namespace Presentacion.Views.VistasVendedor
 {
-    partial class VistaVendedorNuevo
+    partial class VistaCuentaVendedor
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelFormulario = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblConfirmarContraseña = new Presentacion.Controllers.LabelPropio();
+            this.txtConfirmarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtContrasenia = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelContraseña = new Presentacion.Controllers.LabelPropio();
@@ -38,15 +40,15 @@
             this.labelNombre = new Presentacion.Controllers.LabelPropio();
             this.txtApellidos = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.btnAgregar = new Presentacion.Controllers.BotonPropio(this.components);
-            this.btnCancelar = new Presentacion.Controllers.BotonPropio(this.components);
             this.resultado = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.btnModificar = new Presentacion.Controllers.BotonPropio(this.components);
             this.panelFormulario.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelFormulario
             // 
+            this.panelFormulario.Controls.Add(this.lblConfirmarContraseña);
+            this.panelFormulario.Controls.Add(this.txtConfirmarContraseña);
             this.panelFormulario.Controls.Add(this.txtContrasenia);
             this.panelFormulario.Controls.Add(this.txtCorreo);
             this.panelFormulario.Controls.Add(this.labelContraseña);
@@ -57,8 +59,38 @@
             this.panelFormulario.Controls.Add(this.txtNombre);
             this.panelFormulario.Location = new System.Drawing.Point(206, 102);
             this.panelFormulario.Name = "panelFormulario";
-            this.panelFormulario.Size = new System.Drawing.Size(356, 212);
+            this.panelFormulario.Size = new System.Drawing.Size(356, 239);
             this.panelFormulario.TabIndex = 0;
+            // 
+            // lblConfirmarContraseña
+            // 
+            this.lblConfirmarContraseña.AutoSize = true;
+            this.lblConfirmarContraseña.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmarContraseña.Location = new System.Drawing.Point(3, 206);
+            this.lblConfirmarContraseña.Name = "lblConfirmarContraseña";
+            this.lblConfirmarContraseña.Size = new System.Drawing.Size(143, 17);
+            this.lblConfirmarContraseña.TabIndex = 18;
+            this.lblConfirmarContraseña.Text = "Confirmar Contraseña";
+            // 
+            // txtConfirmarContraseña
+            // 
+            this.txtConfirmarContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmarContraseña.DefaultText = "";
+            this.txtConfirmarContraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmarContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmarContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmarContraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmarContraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmarContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtConfirmarContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmarContraseña.Location = new System.Drawing.Point(148, 196);
+            this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
+            this.txtConfirmarContraseña.PasswordChar = '●';
+            this.txtConfirmarContraseña.PlaceholderText = "";
+            this.txtConfirmarContraseña.SelectedText = "";
+            this.txtConfirmarContraseña.Size = new System.Drawing.Size(200, 36);
+            this.txtConfirmarContraseña.TabIndex = 17;
+            this.txtConfirmarContraseña.UseSystemPasswordChar = true;
             // 
             // txtContrasenia
             // 
@@ -177,50 +209,6 @@
             this.txtNombre.Size = new System.Drawing.Size(200, 36);
             this.txtNombre.TabIndex = 2;
             // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnAgregar.BackgroundColor = System.Drawing.Color.LimeGreen;
-            this.btnAgregar.BorderColor = System.Drawing.Color.Coral;
-            this.btnAgregar.BorderRadius = 0;
-            this.btnAgregar.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(392, 383);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(180, 45);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextColor = System.Drawing.Color.White;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Brown;
-            this.btnCancelar.BackgroundColor = System.Drawing.Color.Brown;
-            this.btnCancelar.BorderColor = System.Drawing.Color.Coral;
-            this.btnCancelar.BorderRadius = 0;
-            this.btnCancelar.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(206, 383);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(180, 45);
-            this.btnCancelar.TabIndex = 2;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextColor = System.Drawing.Color.White;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // resultado
             // 
             this.resultado.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
@@ -230,16 +218,34 @@
             this.resultado.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             this.resultado.Text = null;
             // 
-            // VistaVendedorNuevo
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnModificar.BackgroundColor = System.Drawing.Color.LimeGreen;
+            this.btnModificar.BorderColor = System.Drawing.Color.Coral;
+            this.btnModificar.BorderRadius = 0;
+            this.btnModificar.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(294, 370);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(180, 45);
+            this.btnModificar.TabIndex = 4;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextColor = System.Drawing.Color.White;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // VistaCuentaVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.panelFormulario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "VistaVendedorNuevo";
+            this.Name = "VistaCuentaVendedor";
             this.Text = "VistaLibroNuevo";
             this.panelFormulario.ResumeLayout(false);
             this.panelFormulario.PerformLayout();
@@ -257,12 +263,11 @@
 
         private Controllers.LabelPropio labelICorreo;
         private Controllers.LabelPropio labelNombre;
-        private Controllers.LabelPropio labelApellidos;      
+        private Controllers.LabelPropio labelApellidos;
         private Controllers.LabelPropio labelContraseña;
-
-        private Controllers.BotonPropio btnCancelar;
-        private Controllers.BotonPropio btnAgregar;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2MessageDialog resultado;
+        private Controllers.BotonPropio btnModificar;
+        private Controllers.LabelPropio lblConfirmarContraseña;
+        private Guna.UI2.WinForms.Guna2TextBox txtConfirmarContraseña;
     }
 }

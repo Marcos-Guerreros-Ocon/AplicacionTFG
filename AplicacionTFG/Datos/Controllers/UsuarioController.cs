@@ -109,11 +109,11 @@ namespace Datos.Controllers
         /// </summary>
         /// <param name="usuario">Usuario que queremos modificar.</param>
         /// <returns>Devuelve true en caso de modificarlo y false en caso contrario.</returns>
-        public bool ModificarUsuario(Usuario usuario)
+        public bool ModificarUsuario(int idUsuario,Usuario usuario)
         {
             try
             {
-                Usuario usu = ObtenerUsuario(usuario.idUsuario);
+                Usuario usu = ObtenerUsuario(idUsuario);
 
                 if (usu == null)
                 {

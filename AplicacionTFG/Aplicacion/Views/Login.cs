@@ -30,33 +30,33 @@ namespace Presentacion.Views
 
             if (correo == "")
             {
-                MessageBox.Show("El campo correo esta vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MostrarMensajeError("El campo correo esta vacio");
                 return;
             }
 
             if (contraseña == "")
             {
-                MessageBox.Show("El campo contraseña vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MostrarMensajeError("El campo contraseña vacio");
                 return;
             }
 
 
             if (!expresion.IsMatch(correo))
             {
-                MessageBox.Show("Correo no es del dominio @correo.com", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MostrarMensajeError("Correo no es del dominio @correo.com");
                 return;
             }
             Usuario usuario = new UsuarioController().ObtenerUsuario(correo);
             contraseña = CifrarContraseña(contraseña);
             if (usuario == null)
             {
-                MessageBox.Show("Correo equivocado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MostrarMensajeError("Correo equivocado");
                 return;
             }
 
             if (!contraseña.Equals(usuario.contrasenia))
             {
-                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MostrarMensajeError("Contraseña incorrecta");
                 return;
             }
 
@@ -94,6 +94,12 @@ namespace Presentacion.Views
             }
             return hash.ToString();
         }
-
+        private void MostrarMensajeError(string msg)
+        {
+            this.resultado.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.resultado.Caption = "Error";
+            this.resultado.Text = msg;
+            this.resultado.Show();
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace Presentacion.Views.VistasGerente
                 correo = txtCorreo.Text
             };
 
-            bool exito = new UsuarioController().ModificarUsuario(usuario);
+            bool exito = new UsuarioController().ModificarUsuario(Int32.Parse(txtIdUsuario.Text),usuario);
             if (!exito)
             {
                 MostrarMensajeError("Error al modificar los datos del vendedor");

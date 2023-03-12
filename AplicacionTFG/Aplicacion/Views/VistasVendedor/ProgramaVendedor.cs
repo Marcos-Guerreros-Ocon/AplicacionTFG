@@ -270,6 +270,10 @@ namespace Presentacion.Views.VistasVendedor
             openChildForm(vistaVentasVendedor);
         }
 
-
+        private void btnCuenta_Click(object sender, EventArgs e)
+        {
+            VistaCuentaVendedor vistaCuentaVendedor= new VistaCuentaVendedor();
+            openChildForm(vistaCuentaVendedor);
+        }
     }
 }
