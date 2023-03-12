@@ -76,5 +76,12 @@ namespace Presentacion.Views.VistasGerente
             CargarTabla(ventas);
 
         }
+
+        private void btnInforme_Click(object sender, EventArgs e)
+        {
+            VistaInformes vistaInforme = new VistaInformes();
+            vistaInforme.ShowDialog();
+
+        }
     }
 }

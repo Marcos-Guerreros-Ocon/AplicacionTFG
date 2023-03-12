@@ -48,9 +48,9 @@ namespace Presentacion.Views.VistasVendedor
             this.btnLibros1 = new System.Windows.Forms.Button();
             this.btnLibros = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.fotoLogo = new System.Windows.Forms.PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelFormulario = new System.Windows.Forms.Panel();
-            this.fotoLogo = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelVentas.SuspendLayout();
             this.panelLibros.SuspendLayout();
@@ -295,6 +295,18 @@ namespace Presentacion.Views.VistasVendedor
             this.panelLogo.Size = new System.Drawing.Size(250, 128);
             this.panelLogo.TabIndex = 1;
             // 
+            // fotoLogo
+            // 
+            this.fotoLogo.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.fotoLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fotoLogo.Image = ((System.Drawing.Image)(resources.GetObject("fotoLogo.Image")));
+            this.fotoLogo.Location = new System.Drawing.Point(0, 0);
+            this.fotoLogo.Name = "fotoLogo";
+            this.fotoLogo.Size = new System.Drawing.Size(250, 122);
+            this.fotoLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fotoLogo.TabIndex = 0;
+            this.fotoLogo.TabStop = false;
+            // 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_HOR_POSITIVE;
@@ -310,18 +322,6 @@ namespace Presentacion.Views.VistasVendedor
             this.panelFormulario.Size = new System.Drawing.Size(950, 844);
             this.panelFormulario.TabIndex = 1;
             // 
-            // fotoLogo
-            // 
-            this.fotoLogo.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.fotoLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fotoLogo.Image = ((System.Drawing.Image)(resources.GetObject("fotoLogo.Image")));
-            this.fotoLogo.Location = new System.Drawing.Point(0, 0);
-            this.fotoLogo.Name = "fotoLogo";
-            this.fotoLogo.Size = new System.Drawing.Size(250, 122);
-            this.fotoLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.fotoLogo.TabIndex = 0;
-            this.fotoLogo.TabStop = false;
-            // 
             // ProgramaVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,6 +331,7 @@ namespace Presentacion.Views.VistasVendedor
             this.Controls.Add(this.panelFormulario);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1200, 968);
             this.MinimumSize = new System.Drawing.Size(1200, 968);
             this.Name = "ProgramaVendedor";

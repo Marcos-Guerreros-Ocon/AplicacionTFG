@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaCuentaVendedor));
             this.panelFormulario = new Guna.UI2.WinForms.Guna2Panel();
             this.lblConfirmarContraseña = new Presentacion.Controllers.LabelPropio();
             this.txtConfirmarContraseña = new Guna.UI2.WinForms.Guna2TextBox();
@@ -245,6 +246,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.panelFormulario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VistaCuentaVendedor";
             this.Text = "VistaLibroNuevo";
             this.panelFormulario.ResumeLayout(false);

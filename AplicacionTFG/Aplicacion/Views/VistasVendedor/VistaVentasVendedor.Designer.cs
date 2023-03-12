@@ -34,6 +34,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaVentasVendedor));
             this.tablaVentas = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -209,6 +210,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tablaVentas);
             this.Controls.Add(this.txtBuscar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VistaVentasVendedor";
             this.Text = "Dispositivos";
             ((System.ComponentModel.ISupportInitialize)(this.tablaVentas)).EndInit();

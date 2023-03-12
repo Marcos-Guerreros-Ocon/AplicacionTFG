@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaLibrosVendedor));
             this.btnFiltroGenero = new Guna.UI2.WinForms.Guna2Button();
             this.btnFiltroModelo = new Guna.UI2.WinForms.Guna2Button();
             this.btnFiltroAutor = new Guna.UI2.WinForms.Guna2Button();
@@ -284,6 +285,7 @@
             this.Controls.Add(this.btnFiltroModelo);
             this.Controls.Add(this.btnFiltroGenero);
             this.Controls.Add(this.txtBuscar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VistaLibrosVendedor";
             this.Text = "Dispositivos";
             ((System.ComponentModel.ISupportInitialize)(this.tablaLibros)).EndInit();

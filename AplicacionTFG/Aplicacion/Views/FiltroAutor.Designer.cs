@@ -35,6 +35,7 @@ namespace Presentacion.Views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FiltroAutor));
             this.tablaFiltroAutores = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Filtrar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -169,6 +170,7 @@ namespace Presentacion.Views
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.tablaFiltroAutores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(500, 500);
             this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "FiltroAutor";

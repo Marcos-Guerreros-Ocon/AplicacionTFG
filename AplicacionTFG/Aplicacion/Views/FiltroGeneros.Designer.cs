@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FiltroGeneros));
             this.tablaFiltroGeneros = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Género = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Filtrar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -169,6 +170,7 @@
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.tablaFiltroGeneros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(500, 500);
             this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "FiltroGeneros";

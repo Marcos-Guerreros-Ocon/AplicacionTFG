@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaVendedoresGerente));
             this.tablaVendedores = new Guna.UI2.WinForms.Guna2DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -184,6 +185,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.tablaVendedores);
             this.Controls.Add(this.txtBuscar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VistaVendedoresGerente";
             this.Text = "Dispositivos";
             ((System.ComponentModel.ISupportInitialize)(this.tablaVendedores)).EndInit();
