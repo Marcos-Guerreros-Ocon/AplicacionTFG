@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaVendedorGerente));
             this.panelFormulario = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtIdUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtContrasenia = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelContraseña = new Presentacion.Controllers.LabelPropio();
@@ -45,12 +44,12 @@
             this.btnBorrar = new Presentacion.Controllers.BotonPropio(this.components);
             this.btnCancelar = new Presentacion.Controllers.BotonPropio(this.components);
             this.resultado = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.txtIdUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelFormulario.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelFormulario
             // 
-            this.panelFormulario.Controls.Add(this.txtIdUsuario);
             this.panelFormulario.Controls.Add(this.txtContrasenia);
             this.panelFormulario.Controls.Add(this.txtCorreo);
             this.panelFormulario.Controls.Add(this.labelContraseña);
@@ -63,27 +62,6 @@
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(356, 242);
             this.panelFormulario.TabIndex = 0;
-            // 
-            // txtIdUsuario
-            // 
-            this.txtIdUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdUsuario.DefaultText = "";
-            this.txtIdUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdUsuario.Location = new System.Drawing.Point(148, 193);
-            this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.PasswordChar = '●';
-            this.txtIdUsuario.PlaceholderText = "";
-            this.txtIdUsuario.SelectedText = "";
-            this.txtIdUsuario.Size = new System.Drawing.Size(200, 36);
-            this.txtIdUsuario.TabIndex = 17;
-            this.txtIdUsuario.UseSystemPasswordChar = true;
-            this.txtIdUsuario.Visible = false;
             // 
             // txtContrasenia
             // 
@@ -275,11 +253,33 @@
             this.resultado.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             this.resultado.Text = null;
             // 
+            // txtIdUsuario
+            // 
+            this.txtIdUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdUsuario.DefaultText = "";
+            this.txtIdUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdUsuario.Enabled = false;
+            this.txtIdUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdUsuario.Location = new System.Drawing.Point(366, 73);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.PasswordChar = '\0';
+            this.txtIdUsuario.PlaceholderText = "";
+            this.txtIdUsuario.SelectedText = "";
+            this.txtIdUsuario.Size = new System.Drawing.Size(200, 36);
+            this.txtIdUsuario.TabIndex = 19;
+            this.txtIdUsuario.Visible = false;
+            // 
             // VistaVendedorGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnCancelar);
@@ -309,7 +309,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCorreo;
         private Guna.UI2.WinForms.Guna2TextBox txtContrasenia;
         private Controllers.BotonPropio btnModificar;
-        private Guna.UI2.WinForms.Guna2TextBox txtIdUsuario;
         private Guna.UI2.WinForms.Guna2MessageDialog resultado;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdUsuario;
     }
 }
