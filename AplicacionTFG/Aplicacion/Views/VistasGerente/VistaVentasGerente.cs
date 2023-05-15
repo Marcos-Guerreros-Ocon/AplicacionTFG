@@ -83,5 +83,40 @@ namespace Presentacion.Views.VistasGerente
             vistaInforme.ShowDialog();
 
         }
+
+
+        private void btnFiltroAutor_Click(object sender, EventArgs e)
+        {
+            Filtrar filtro = new Filtrar();
+            FiltroAutor popup = new FiltroAutor(filtro);
+            popup.ShowDialog();
+
+            List<string> autoresSeleccionados = filtro.listaParaFiltrar;
+
+            if (autoresSeleccionados.Count() > 0)
+            {
+                List<Venta> ventas = new VentaController().ObtenerVentas();
+                List<Libro> listaLibrosFiltrados = new LibrosController().ObtenerLibrosPorAutor(autoresSeleccionados);
+                Libro a;
+                List<Venta> aux = new List<Venta>();
+                foreach (Venta venta in ventas)
+                {
+                    a = new LibrosController().ObtenerLibro(venta.isbn);
+                    foreach (Libro libro  in listaLibrosFiltrados)
+                    {
+                        if (libro.isbn.Equals(a.isbn))
+                        {
+                            aux.Add(venta);
+                        }
+                    }
+                }
+                CargarTabla(aux);
+            }
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            CargarTabla(null);
+        }
     }
 }

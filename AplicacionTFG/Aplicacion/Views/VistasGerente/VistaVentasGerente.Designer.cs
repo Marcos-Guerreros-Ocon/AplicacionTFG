@@ -43,6 +43,8 @@
             this.btnVistaGrafico = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnInforme = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFiltroAutor = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReiniciar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,7 +201,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(90, 157);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(69, 157);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(833, 445);
             this.flowLayoutPanel1.TabIndex = 19;
@@ -222,11 +224,47 @@
             this.btnInforme.Text = "Generar Informe";
             this.btnInforme.Click += new System.EventHandler(this.btnInforme_Click);
             // 
+            // btnFiltroAutor
+            // 
+            this.btnFiltroAutor.BorderRadius = 10;
+            this.btnFiltroAutor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroAutor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltroAutor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFiltroAutor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFiltroAutor.FillColor = System.Drawing.Color.Coral;
+            this.btnFiltroAutor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnFiltroAutor.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroAutor.Location = new System.Drawing.Point(69, 72);
+            this.btnFiltroAutor.Name = "btnFiltroAutor";
+            this.btnFiltroAutor.Size = new System.Drawing.Size(120, 45);
+            this.btnFiltroAutor.TabIndex = 11;
+            this.btnFiltroAutor.Text = "Autor";
+            this.btnFiltroAutor.Click += new System.EventHandler(this.btnFiltroAutor_Click);
+            // 
+            // btnReiniciar
+            // 
+            this.btnReiniciar.BorderRadius = 10;
+            this.btnReiniciar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReiniciar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReiniciar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReiniciar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReiniciar.FillColor = System.Drawing.Color.Coral;
+            this.btnReiniciar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnReiniciar.ForeColor = System.Drawing.Color.White;
+            this.btnReiniciar.Location = new System.Drawing.Point(782, 72);
+            this.btnReiniciar.Name = "btnReiniciar";
+            this.btnReiniciar.Size = new System.Drawing.Size(120, 45);
+            this.btnReiniciar.TabIndex = 21;
+            this.btnReiniciar.Text = "Reiniciar";
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
+            // 
             // VistaVentasGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 691);
+            this.Controls.Add(this.btnReiniciar);
+            this.Controls.Add(this.btnFiltroAutor);
             this.Controls.Add(this.btnInforme);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnVistaGrafico);
@@ -252,5 +290,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Button btnInforme;
+        private Guna.UI2.WinForms.Guna2Button btnFiltroAutor;
+        private Guna.UI2.WinForms.Guna2Button btnReiniciar;
     }
 }
